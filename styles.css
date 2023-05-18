@@ -183,6 +183,7 @@ nav {
 
 .tape-bnt {
   padding: 11px 67px 17px 67px;
+  margin-right: 8px;
 
   font-family: "OutfitRegular";
   font-size: 22px;
@@ -226,6 +227,105 @@ nav {
   margin: 0px;
   margin-top: 16px;
 
+  font-family: "OutfitRegular";
+  font-size: 26px;
+  color: #2f2f2f;
+}
+
+.post {
+  display: flex;
+
+  margin-top: 146px;
+}
+
+.post-img {
+  border-radius: 30px;
+}
+
+.post-text {
+  margin-left: 63px;
+}
+
+.post-text__heading {
+  margin: 0px;
+
+  font-family: "OutfitRegular";
+  font-size: 35px;
+  color: #2f2f2f;
+}
+
+.post-text__question {
+  margin: 0;
+  margin-top: 2px;
+
+  font-family: "OutfitRegular";
+  font-size: 48px;
+  color: #2f2f2f;
+}
+
+.post-text__paragraph {
+  margin: 0;
+  margin-top: 38px;
+
+  font-family: "OutfitRegular";
+  font-size: 18px;
+  color: #2f2f2f;
+}
+
+.bnt-base {
+  padding: 12px 40px 16px 40px;
+  margin-top: 32px;
+
+  font-family: "OutfitBold";
+  font-size: 15px;
+  color: #ffffff;
+
+  border: none;
+  background-color: #2f2f2f;
+}
+
+.bnt-left {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.post > ul {
+  padding: 0;
+  margin: 0px;
+  list-style: none;
+}
+
+.post > ul > li > span {
+  display: inline-block;
+
+  padding: 6px 20px 11px 20px;
+
+  font-family: "OutfitRegular";
+  font-size: 16px;
+  color: #ffffff;
+
+  background-color: #82cbac;
+  border-radius: 30px;
+}
+
+.post > ul > li:nth-child(2n) > span {
+  background-color: #ff7f96;
+}
+
+.post > ul > li:nth-child(3n) > span {
+  background-color: #ead71b;
+}
+
+.post > ul > li > h3 {
+  margin: 0px;
+  font-family: "OutfitBold";
+  font-size: 35px;
+  color: #2f2f2f;
+}
+
+.post > ul > li > p {
+  margin: 0;
   font-family: "OutfitRegular";
   font-size: 26px;
   color: #2f2f2f;
