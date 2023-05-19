@@ -8,7 +8,6 @@
 
 @font-face {
   font-family: "OutfitBold";
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
   src: url("fonts/Outfit-Bold.ttf") format("truetype");
@@ -235,6 +234,8 @@ nav {
 .post {
   display: flex;
 
+  align-items: center;
+
   margin-top: 146px;
 }
 
@@ -292,7 +293,7 @@ nav {
 
 .post > ul {
   padding: 0;
-  margin: 0px;
+  margin: 64px 153px 64px 64px;
   list-style: none;
 }
 
@@ -330,3 +331,146 @@ nav {
   font-size: 26px;
   color: #2f2f2f;
 }
+
+.post-join {
+  position: relative;
+  display: flex;
+
+  margin-top: 208px;
+}
+
+.post-join__background {
+  position: absolute;
+  background-color: #82cbac;
+  color: red;
+  z-index: -1;
+}
+
+.post-join__text {
+  width: 657px;
+  height: 520px;
+}
+
+.post-join__text > h2 {
+  margin: 0;
+
+  font-family: "OutfitRegular";
+  font-size: 64px;
+  color: #2f2f2f;
+}
+
+.post-join__text > p {
+  margin: 0;
+  margin-top: 33px;
+
+  font-family: "OutfitRegular";
+  font-size: 20px;
+  color: #2f2f2f;
+}
+
+.post-join > img {
+  position: absolute;
+  top: -70px;
+  right: -120px;
+  margin: 0;
+}
+
+.colection-nft {
+  margin-top: 101px;
+}
+
+.catalog-colection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colection-nft-card {
+  width: 358px;
+}
+
+.colection-nft-card__img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.colection-nft-card__title {
+  padding-left: 50px;
+  padding-top: 29px;
+  padding-bottom: 37px;
+
+  font-family: "OutfitBold";
+  font-size: 26px;
+  color: #2f2f2f;
+}
+
+.top-nft {
+  margin-top: 95px;
+}
+
+.catalog-top-nft {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 0 64px;
+}
+
+.top-nft-card {
+  width: 332px;
+  margin-bottom: 42px;
+}
+
+.top-nft-card__img {
+  border-radius: 30px;
+}
+
+.top-nft-card-panel {
+  display: flex;
+  align-items: center;
+  padding: 28px 0px 32px 28px;
+}
+
+.top-nft-card__title {
+  display: inline;
+
+  margin-right: 8px;
+
+  font-family: "OutfitRegular";
+  font-size: 16px;
+  color: #2f2f2f;
+}
+
+.top-nft-card__id {
+  margin: 0px;
+
+  font-family: "OutfitBold";
+  font-size: 18px;
+  color: #2f2f2f;
+}
+
+.top-nft-card__bnt-full-see {
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+  margin-left: auto;
+  margin-right: 9px;
+
+  background-color: rgba(168, 193, 216, 0.2);
+  border: none;
+}
+
+.top-nft-card__bnt-on-lock {
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+
+  background-color: #ff7f96;
+  border: none;
+  border-radius: 45px;
+}
+/* 
+Пометки
+Переделать отступ у bnt-base
+Сделать силектор который ставит кнопку в центер */
