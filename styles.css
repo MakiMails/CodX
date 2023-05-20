@@ -8,6 +8,7 @@
 
 @font-face {
   font-family: "OutfitBold";
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
   src: url("fonts/Outfit-Bold.ttf") format("truetype");
@@ -65,9 +66,9 @@ nav {
   margin-left: 20px;
 }
 
-.nav-bnt {
-  padding: 15px;
-  padding-top: 11px;
+.bnt-rounded-corners {
+  padding: 14px;
+  padding-top: 10px;
 
   text-align: center;
 
@@ -275,7 +276,6 @@ nav {
 
 .bnt-base {
   padding: 12px 40px 16px 40px;
-  margin-top: 32px;
 
   font-family: "OutfitBold";
   font-size: 15px;
@@ -470,7 +470,109 @@ nav {
   border: none;
   border-radius: 45px;
 }
+
+.bnt-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form__title {
+  margin: 0;
+
+  font-family: "OutfitRegular";
+  font-size: 35px;
+  color: #2f2f2f;
+}
+
+.form__description {
+  margin: 0;
+  margin-top: 16px;
+
+  width: 420px;
+
+  font-family: "OutfitRegular";
+  font-size: 18px;
+  color: #2f2f2f;
+}
+
+.form__input {
+  padding-left: 32px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0;
+  margin-top: 16px;
+  width: 327px;
+
+  font-family: "OutfitRegular";
+  font-size: 14px;
+  color: #2f2f2f;
+
+  border: none;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  color: #222222;
+}
+
+.footer-container {
+  padding: 0 200px;
+  margin-top: 97px;
+  margin-bottom: 42px;
+}
+
+.footer-container-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-container-list__item {
+  display: block;
+  min-width: 106px;
+  margin-right: 90px;
+}
+
+.footer-container-list__item:last-child {
+  margin-right: 0;
+}
+
+.item__title {
+  font-family: "OutfitRegular";
+  font-size: 20px;
+  color: #2f2f2f;
+}
+
+.item__list-link {
+  padding: 0;
+  margin-top: 17px;
+  list-style: none;
+}
+
+.item__list-link > li {
+  margin-bottom: 8px;
+
+  font-family: "OutfitRegular";
+  font-size: 16px;
+  color: #2f2f2f;
+}
+
+.footer__text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__text > p {
+  font-family: "OutfitRegular";
+  font-size: 16px;
+  color: #2f2f2f;
+}
+
+.footer__text > p > span {
+  color: #ff7f96;
+}
+
 /* 
 Пометки
-Переделать отступ у bnt-base
+Переделать отступ у bnt-base - убрал отступ вообше
 Сделать силектор который ставит кнопку в центер */

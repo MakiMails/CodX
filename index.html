@@ -41,7 +41,9 @@
               height="18"
           /></a>
         </div>
-        <button class="nav-bnt" type="button">View in OpenSea</button>
+        <button class="bnt-rounded-corners" type="button">
+          View in OpenSea
+        </button>
       </nav>
       <section class="preview">
         <div class="preview__text">
@@ -169,7 +171,7 @@
       </section>
       <section class="post-join">
         <div class="post-join__background">
-          <h1>ДОДЕЛАТЬ ЗАДНИЙ ФОН</h1>
+          <h1>Переделать по макету</h1>
         </div>
         <div class="post-join__text">
           <h2>Join Us and Developer uor most precious NFT</h2>
@@ -220,7 +222,7 @@
             <h3 class="colection-nft-card__title">Collectibles</h3>
           </a>
         </div>
-        <button type="button" class="bnt-base">View all</button>
+        <button type="button" class="bnt-base bnt-center">View all</button>
       </section>
       <section class="top-nft">
         <h2 class="center-heading">Top NFT</h2>
@@ -396,45 +398,73 @@
             </div>
           </a>
         </section>
-        <button type="button" class="bnt-base">View all</button>
+        <button type="button" class="bnt-base bnt-center">View all</button>
       </section>
-      <form action="">
-        <h2>Stay in the loop</h2>
-        <p>
+      <form class="form-be-aware-of-event" action="">
+        <h2 class="form__title">Stay in the loop</h2>
+        <p class="form__description">
           Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
           diam arcu, porta et magna at
         </p>
-        <input type="email" />
-        <input type="text" />
-        <button type="button">Sing Up</button>
+        <input
+          class="form__input"
+          type="email"
+          placeholder="Your email address"
+        />
+        <input
+          class="form__input"
+          type="text"
+          placeholder="Your phone number"
+        />
+        <button class="bnt-rounded-corners" type="button">Sing Up</button>
       </form>
     </main>
     <footer class="container">
-      <ul>
-        <li>
-          <a class="logo" href="#"
-            ><img src="" alt="CodX" width="138" height="50"
-          /></a>
-        </li>
-        <li>
-          <h2>Site</h2>
-          <ul>
-            <li>About us</li>
-            <li>NFTs</li>
-            <li>Contact</li>
+      <section class="footer-container">
+        <section class="footer-container-list">
+          <ul class="footer-container-list">
+            <li class="footer-container-list__item">
+              <a class="logo" href="#"
+                ><img
+                  src="img/icons/logo.svg"
+                  alt="CodX"
+                  width="138"
+                  height="50"
+              /></a>
+              <!-- <a>Join in community</a> -->
+              <!-- тут ссылки на соц сети -->
+            </li>
+            <li class="footer-container-list__item">
+              <h2 class="item__title">Site</h2>
+              <ul class="item__list-link">
+                <li>About us</li>
+                <li>NFTs</li>
+                <li>Contact</li>
+              </ul>
+            </li>
+            <li class="footer-container-list__item">
+              <h2 class="item__title">Utility</h2>
+              <ul class="item__list-link">
+                <li>Style guide</li>
+                <li>Lincensing</li>
+                <li>404</li>
+              </ul>
+            </li>
+            <li class="footer-container-list__item">
+              <h2 class="item__title">Work</h2>
+              <ul class="item__list-link">
+                <li>Patners</li>
+                <li>Individuals</li>
+                <li>OpenSea</li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li>
-          <h2>Utility</h2>
-          <ul>
-            <li>Style guide</li>
-            <li>Lincensing</li>
-            <li>404</li>
-          </ul>
-        </li>
-      </ul>
-      <p>© 2022 All rights reserved.</p>
-      <p>Created By <span>Udesly</span> Powered By <span>Webflow</span></p>
+        </section>
+        <div class="footer__text">
+          <p>© 2022 All rights reserved.</p>
+          <p>Created By <span>Udesly</span> Powered By <span>Webflow</span></p>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
