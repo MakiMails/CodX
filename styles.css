@@ -3,7 +3,8 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("fonts/Outfit-Regular.ttf") format("truetype");
+  src: url("../fonts/Outfit-Regular.woff2") format("woff2"),
+   url("../fonts/Outfit-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -11,7 +12,22 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("fonts/Outfit-Bold.ttf") format("truetype");
+  src: url("../fonts/Outfit-Bold.woff2") format("woff2"),
+   url("../fonts/Outfit-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "WixMadeforDisplayRegular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/WixMadeforDisplay-Regular.woff2") format("woff2"),
+   url("../fonts/WixMadeforDisplay-Regular.woff") format("woff");
+}
+
+
+html{
+  font-family: "WixMadeforDisplayRegular", Helvetica, sans-serif;
 }
 
 body {
@@ -29,6 +45,24 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
 .container {
   margin: 0 auto;
   width: 1200px;
@@ -37,9 +71,10 @@ a {
 nav {
   display: flex;
   align-items: center;
+
   margin: 0;
   margin-top: 17px;
-  padding: 28xp 18px 28px 19px;
+  padding: 28px 18px 28px 19px;
 }
 
 .logo {
@@ -53,7 +88,7 @@ nav {
 .nav-link {
   margin-right: 48px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 16px;
   color: #222222;
 }
@@ -72,7 +107,7 @@ nav {
 
   text-align: center;
 
-  font-family: "OutfitBold";
+  font-family: "OutfitBold", sans-serif;
   font-size: 13px;
   color: #ffffff;
 
@@ -93,7 +128,7 @@ nav {
 .preview__text > p:first-child {
   margin: 0px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 13px;
   color: #82cbac;
 }
@@ -104,7 +139,7 @@ nav {
   padding: 0px;
   margin: 0px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 64px;
   line-height: 1.1em;
   color: #2f2f2f;
@@ -113,7 +148,7 @@ nav {
 .preview__text > h2 + p {
   width: 400px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 17px;
   color: #2f2f2f;
 }
@@ -161,7 +196,7 @@ nav {
 }
 
 .center-heading {
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 64px;
   text-align: center;
   color: #2f2f2f;
@@ -171,7 +206,7 @@ nav {
   width: 610px;
   margin: 0 auto;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 17px;
   text-align: center;
   color: #2f2f2f;
@@ -183,7 +218,7 @@ nav {
   margin-top: 267px;
   margin-bottom: 128px;
 
-  background-image: url("img/Group 1.jpg");
+  background-image: url("img/line-imgs.jpg");
 }
 .tape {
   margin-top: 72px;
@@ -193,7 +228,7 @@ nav {
   padding: 11px 67px 17px 67px;
   margin-right: 8px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 22px;
   color: #2f2f2f;
 
@@ -215,7 +250,7 @@ nav {
 .info__profession {
   margin: 0px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 18px;
   color: #ff7f96;
 }
@@ -226,7 +261,7 @@ nav {
   margin: 0px;
   margin-top: 11px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 36px;
   color: #2f2f2f;
 }
@@ -235,7 +270,7 @@ nav {
   margin: 0px;
   margin-top: 16px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 26px;
   color: #2f2f2f;
 }
@@ -259,7 +294,7 @@ nav {
 .post-text__heading {
   margin: 0px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 35px;
   color: #2f2f2f;
 }
@@ -268,7 +303,7 @@ nav {
   margin: 0;
   margin-top: 2px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 48px;
   color: #2f2f2f;
 }
@@ -277,41 +312,30 @@ nav {
   margin: 0;
   margin-top: 38px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 18px;
   color: #2f2f2f;
 }
 
-.bnt-base {
-  padding: 12px 40px 16px 40px;
-  margin-top: 64px;
-
-  font-family: "OutfitBold";
-  font-size: 15px;
-  color: #ffffff;
-
-  border: none;
-  background-color: #2f2f2f;
-}
-
-.bnt-right {
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
-}
-
 .post > ul {
   padding: 0;
-  margin: 64px 153px 64px 64px;
+  margin: 64px;
+  margin-right: 153px;
   list-style: none;
+}
+
+.post > ul > li{
+  margin: 0;
+  margin-bottom: 32px;
 }
 
 .post > ul > li > span {
   display: inline-block;
 
   padding: 6px 20px 11px 20px;
+  margin-bottom: 5px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 16px;
   color: #ffffff;
 
@@ -329,14 +353,15 @@ nav {
 
 .post > ul > li > h3 {
   margin: 0px;
-  font-family: "OutfitBold";
+  margin-bottom: 13px;
+  font-family: "OutfitBold", sans-serif;
   font-size: 35px;
   color: #2f2f2f;
 }
 
 .post > ul > li > p {
   margin: 0;
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 26px;
   color: #2f2f2f;
 }
@@ -364,7 +389,7 @@ nav {
 .post-join__text > h2 {
   margin: 0;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 64px;
   color: #2f2f2f;
 }
@@ -373,13 +398,9 @@ nav {
   margin: 0;
   margin-top: 33px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 20px;
   color: #2f2f2f;
-}
-
-.bnt-in-post {
-  margin-top: 33px;
 }
 
 .post-join > img {
@@ -393,9 +414,13 @@ nav {
   margin-top: 101px;
 }
 
-.catalog-colection {
+.catalog{
   display: flex;
   justify-content: space-between;
+}
+
+.catalog-colection {
+  
 }
 
 .colection-nft-card {
@@ -412,7 +437,7 @@ nav {
   padding-top: 29px;
   padding-bottom: 37px;
 
-  font-family: "OutfitBold";
+  font-family: "OutfitBold", sans-serif;
   font-size: 26px;
   color: #2f2f2f;
 }
@@ -422,9 +447,7 @@ nav {
 }
 
 .catalog-top-nft {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   padding: 0 64px;
 }
@@ -453,7 +476,7 @@ nav {
 
   margin-right: 8px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 16px;
   color: #2f2f2f;
 }
@@ -461,7 +484,7 @@ nav {
 .top-nft-card__id {
   margin: 0px;
 
-  font-family: "OutfitBold";
+  font-family: "OutfitBold", sans-serif;
   font-size: 18px;
   color: #2f2f2f;
 }
@@ -489,16 +512,10 @@ nav {
   border-radius: 45px;
 }
 
-.bnt-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .form__title {
   margin: 0;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 35px;
   color: #2f2f2f;
 }
@@ -509,7 +526,7 @@ nav {
 
   width: 420px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 18px;
   color: #2f2f2f;
 }
@@ -522,7 +539,7 @@ nav {
   margin-top: 16px;
   width: 327px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 14px;
   color: #2f2f2f;
 
@@ -554,7 +571,7 @@ nav {
 .footer-container-list__item > .logo + a {
   display: inline-block;
   margin-top: 21px;
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 20px;
   color: #2f2f2f;
 }
@@ -572,7 +589,7 @@ nav {
 }
 
 .item__title {
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 20px;
   color: #2f2f2f;
 }
@@ -586,7 +603,7 @@ nav {
 .item__list-link > li {
   margin-bottom: 8px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 16px;
   color: #2f2f2f;
 }
@@ -599,7 +616,7 @@ nav {
 .footer__text > p {
   margin: 0;
   margin-top: 26px;
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 16px;
   color: #2f2f2f;
 }
@@ -607,6 +624,50 @@ nav {
 .footer__text > p > span {
   color: #ff7f96;
 }
+
+
+.bnt-base{
+  padding: 12px 40px 16px 40px;
+
+  font-family: "OutfitBold", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+
+  background-color: #2F2F2F;  
+}
+
+a.bnt-base{
+  text-align: center;
+}
+
+.post-text > .bnt-base{
+  display: block;
+  width: 166px;
+  margin-top: 27px;
+}
+
+.post-join__text > a.bnt-base{
+  display: block;
+  width: 207px;
+  padding: 12px 0 16px 0;
+  margin-top: 33px;
+}
+
+.bnt-center{
+  display: block;
+  margin: 0 auto;
+}
+
+.catalog + .bnt-base {
+  margin-top: 64px;
+}
+
+a.bnt-center{
+  width: 134px;
+  padding: 12px 0 16px 0;
+}
+
+
 
 /* 
 Пометки
