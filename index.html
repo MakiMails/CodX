@@ -8,9 +8,9 @@
     <title>Main</title>
   </head>
   <body>
-    <header>
+    <header class="container">
       <h1 class="visually-hidden">Website for sale and promotion NFTs</h1>
-      <nav class="container">
+      <nav>
         <a class="logo" href="#">
           <img src="img/icons/logo.svg"
             alt="CodX"
@@ -49,10 +49,10 @@
           View in OpenSea
         </a>
       </nav>
-      <section class="container preview">
+      <section class="preview">
         <div class="preview__text">
-          <p>EXTRAORDINARY NFTs</p>
-          <h2>Change your Digital Experience</h2>
+          <h2 class="preview-title">EXTRAORDINARY NFTs</h2>
+          <p class="preview-slogan">Change your Digital Experience</p>
           <p>
             Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
             diam arcu, porta et magna at
@@ -78,6 +78,36 @@
       </section>
       <section class="line-imgs">
         <h2 class="visually-hidden">line imgs</h2>
+        <a href="#">
+          <img src="img/line/picture_slider2.jpg" alt="" width="152" height="152">
+        </a>
+        <a href="#">
+          <img src="img/line/picture_slider3.jpg" alt="" width="152" height="152">
+        </a>
+        <a href="#">
+          <img src="img/line/picture_slider4.jpg" alt="" width="152" height="152">
+        </a>
+        <a href="#">
+          <img src="img/line/picture_slider5.jpg" alt="" width="152" height="152">
+        </a>
+        <a href="#">
+          <img src="img/line/picture_slider6.jpg" alt="" width="152" height="152">
+        </a>
+        <a href="#">
+          <img src="img/line/picture_slider7.jpg" alt="" width="152" height="152">
+        </a>
+        <a href="#">
+          <img src="img/line/picture_slider8.jpg" alt="" width="152" height="152">
+        </a>
+        <a href="#">
+          <img src="img/line/picture_slider9.jpg" alt="" width="152" height="152">
+        </a>
+        <a href="#">
+          <img src="img/line/picture_slider10.jpg" alt="" width="152" height="152">
+        </a>
+        <a href="#">
+          <img src="img/line/picture_slider11.jpg" alt="" width="152" height="152">
+        </a>
       </section>
     </header>
     <main class="container">
@@ -120,9 +150,9 @@
           width="585"
           height="450">
         <div class="post-text">
-          <h3 class="post-text__heading">OUR WORK</h3>
+          <h2 class="post-text__heading">OUR WORK</h2>
           <p class="post-text__question">“Um… what’s going on here?”</p>
-          <p class="post-text__paragraph">
+          <p>
             Nulla facilisi. Praesent molestie diam eu enim aliquet pellentesque.
             Vestibulum consectetur vestibulum tristique. Sed purus neque,
             maximus fermentum bibendum et, porta in sapien.
@@ -378,21 +408,26 @@
         </section>
         <a href="#" class="bnt-base bnt-center">View all</a>
       </section>
-      <form class="form-be-aware-of-event" action="#">
+
+
+
+      <form id="forms-subs-events" class="form-be-aware-of-event" action="#">
         <h2 class="form__title">Stay in the loop</h2>
         <p class="form__description">
           Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
           diam arcu, porta et magna at
         </p>
         <input
-          class="form__input"
-          type="email"
-          placeholder="Your email address">
+            class="input-email form__input"
+            type="email"
+            name="emailUser"
+            placeholder="Your email address">
         <input
-          class="form__input"
+          class="input-phone-num form__input"
           type="text"
+          name="prohoneNumUser"
           placeholder="Your phone number">
-        <button class="bnt-rounded-corners" type="submit">Sing Up</button>
+        <button class="bnt-rounded-corners" type="submit" form="forms-subs-events" name="submitSingUp" >Sing Up</button>
       </form>
     </main>
     <footer class="container">
@@ -462,8 +497,21 @@
         <div class="footer__text">
           <p>© 2022 All rights reserved.</p>
           <p>Created By <span>Udesly</span> Powered By <span>Webflow</span></p>
+          <button id="bnt-open-modal-feedback" class="bnt-base" type="button">Открыть модальное окно</button>
         </div>
       </div>
     </footer>
+    <div id="modal-feedback" class="modal modal-hidden">
+
+      <form id="modal-feedback__form" class="modal__form" action="">
+        <button class="bnt-rounded-corners bnt-close" type="button" name="bntClose"></button>
+        <h2>This is a modal window</h2>
+        <p>Leave a review about it</p>
+        <input class="form__input" type="text" name="userName" placeholder="Your name" maxlength="50">
+        <textarea class="form__textarea" type="text" name="feedbackText" maxlength="250" placeholder="Text feedback" ></textarea>
+        <button  class="bnt-rounded-corners" type="submit">Leave a review</button>
+      </form>
+    </div>
+    <script src="../js/main.js"></script>
   </body>
 </html>

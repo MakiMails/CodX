@@ -77,6 +77,12 @@ nav {
   padding: 28px 18px 28px 19px;
 }
 
+p{
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 18px;
+  color: #2f2f2f;
+}
+
 .logo {
   margin-right: 48px;
 }
@@ -125,7 +131,7 @@ nav {
   justify-content: space-between;
 }
 
-.preview__text > p:first-child {
+.preview-title{
   margin: 0px;
 
   font-family: "OutfitRegular", sans-serif;
@@ -133,7 +139,7 @@ nav {
   color: #82cbac;
 }
 
-.preview__text > h2 {
+.preview-slogan{
   width: 538px;
 
   padding: 0px;
@@ -145,12 +151,8 @@ nav {
   color: #2f2f2f;
 }
 
-.preview__text > h2 + p {
+.preview-slogan + p{
   width: 400px;
-
-  font-family: "OutfitRegular", sans-serif;
-  font-size: 17px;
-  color: #2f2f2f;
 }
 
 .slides {
@@ -195,6 +197,19 @@ nav {
   background-color: #2f2f2f;
 }
 
+.line-imgs {
+  display: flex;
+  padding: 10px;
+  margin-top: 267px;
+  margin-bottom: 128px;
+  overflow: hidden;
+}
+
+.line-imgs > a:hover{
+  transform-origin: center center;
+  scale: 1.1;
+}
+
 .center-heading {
   font-family: "OutfitRegular", sans-serif;
   font-size: 64px;
@@ -205,21 +220,10 @@ nav {
 .center-heading + p {
   width: 610px;
   margin: 0 auto;
-
-  font-family: "OutfitRegular", sans-serif;
-  font-size: 17px;
   text-align: center;
-  color: #2f2f2f;
 }
 
-.line-imgs {
-  height: 152px;
 
-  margin-top: 267px;
-  margin-bottom: 128px;
-
-  background-image: url("img/line-imgs.jpg");
-}
 .tape {
   margin-top: 72px;
 }
@@ -308,15 +312,6 @@ nav {
   color: #2f2f2f;
 }
 
-.post-text__paragraph {
-  margin: 0;
-  margin-top: 38px;
-
-  font-family: "OutfitRegular", sans-serif;
-  font-size: 18px;
-  color: #2f2f2f;
-}
-
 .post > ul {
   padding: 0;
   margin: 64px;
@@ -356,13 +351,6 @@ nav {
   margin-bottom: 13px;
   font-family: "OutfitBold", sans-serif;
   font-size: 35px;
-  color: #2f2f2f;
-}
-
-.post > ul > li > p {
-  margin: 0;
-  font-family: "OutfitRegular", sans-serif;
-  font-size: 26px;
   color: #2f2f2f;
 }
 
@@ -417,10 +405,6 @@ nav {
 .catalog{
   display: flex;
   justify-content: space-between;
-}
-
-.catalog-colection {
-  
 }
 
 .colection-nft-card {
@@ -543,10 +527,17 @@ nav {
   font-size: 14px;
   color: #2f2f2f;
 
-  border: none;
+  border: 2px solid transparent;
   border-radius: 20px;
   background-color: #f6f6f6;
-  color: #222222;
+}
+
+.modal__form > .form__input{
+  width: auto;
+}
+
+.form__input-error{
+  border-color: rgba(255, 0, 0, 0.5);
 }
 
 .footer-container {
@@ -625,6 +616,9 @@ nav {
   color: #ff7f96;
 }
 
+button:disabled{
+  opacity: 0.5;
+}
 
 .bnt-base{
   padding: 12px 40px 16px 40px;
@@ -667,7 +661,92 @@ a.bnt-center{
   padding: 12px 0 16px 0;
 }
 
+.bnt-close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
 
+  right: 20px;
+  top: 20px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.bnt-close:before,
+.bnt-close:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -1px;
+  height: 1px;
+  background-color: black;
+}
+
+.bnt-close:before {
+  transform: rotate(45deg);
+}
+
+.bnt-close:after {
+  transform: rotate(-45deg);
+}
+
+
+.modal{
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  background-color: rgba(56, 56, 56, 0.9);
+  z-index: 1;
+}
+
+.modal-hidden{
+  display: none;
+}
+
+.modal__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  padding: 30px;
+
+  top: calc(50% - 275px);
+  left: calc(50% - 275px);
+
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+
+.form__textarea {
+  padding: 32px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0;
+  margin-top: 16px;
+  height: 200px;
+
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 14px;
+  color: #2f2f2f;
+
+  resize: none;
+
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+}
 
 /* 
 Пометки
