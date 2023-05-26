@@ -24,7 +24,7 @@ function onInputPhoneNum(event) {
 function cuctomValidEmail(inputEmail) {
   let emailPattern = /\S+@\S+\.\S+/;
 
-  if (inputEmail.value != "") {
+  if (inputEmail.value !== "") {
     if (!emailPattern.test(inputEmail.value)) {
       inputEmail.setCustomValidity("The email address was entered incorrectly");
     } else {
@@ -38,7 +38,7 @@ function cuctomValidEmail(inputEmail) {
 function cuctomValidPhoneNum(inputPhoneNum) {
   let phonePattern = /^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/;
 
-  if (inputPhoneNum.value != "") {
+  if (inputPhoneNum.value !== "") {
     if (!phonePattern.test(inputPhoneNum.value)) {
       inputPhoneNum.setCustomValidity("Phone number entered incorrectly");
     } else {
@@ -49,8 +49,8 @@ function cuctomValidPhoneNum(inputPhoneNum) {
   }
 }
 
-//Модальное окно "Отзывы"
 
+//Модальное окно "Отзывы"
 const modalFeedback = document.getElementById("modal-feedback");
 const modalFeedbackWrap = modalFeedback.querySelector(".modal__wrap");
 const bntCloseModalFeedback = modalFeedbackWrap.querySelector(".bnt-close");
@@ -68,7 +68,8 @@ function removeEventsOnFeedbackModelWindow() {
 }
 
 function clearFieldFormFeedback() {
-  inputUserName.textValue = "";
+  inputUserName.value = "";
+  textareaFeedbackText.value = "";
 }
 
 function closeModalFeedback() {
@@ -78,7 +79,7 @@ function closeModalFeedback() {
 }
 
 function onClickModalFeedback(evt) {
-  if (evt.target == modalFeedback) {
+  if (evt.target === modalFeedback) {
     closeModalFeedback();
   }
 }
@@ -95,7 +96,7 @@ function onDownKeyEscape(evt) {
 }
 
 function setEventsOnModalFeedback() {
-  modalFeedback.addEventListener("click", onClickModalFeedback);
+  setTimeout(() => { modalFeedback.addEventListener("click", onClickModalFeedback)}, 1000);
   bntCloseModalFeedback.addEventListener("click", onClickBntCloseModalFeedback);
   document.addEventListener("keydown", onDownKeyEscape);
 }
@@ -109,7 +110,11 @@ function onClickBntOpenModalFeedback() {
   showModalFeedback();
 }
 
+
+//Исполняймый код
+setCustomsValidityForm();
+
 const bntOpenModelFeedback = document.getElementById("bnt-open-modal-feedback");
 bntOpenModelFeedback.addEventListener("click", onClickBntOpenModalFeedback);
 
-setCustomsValidityForm();
+
