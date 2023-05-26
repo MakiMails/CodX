@@ -227,10 +227,10 @@ p{
   overflow: hidden;
 }
 
-.line-imgs > a:hover{
-  transform-origin: center center;
-  scale: 1.1;
+.line-imgs .swiper-slide{
+  width: auto;
 }
+
 
 .center-heading {
   font-family: "OutfitRegular", sans-serif;

@@ -142,7 +142,7 @@ function OnClickTapeControl(evt) {
 }
 
 //swiper
-const swiperTest = new Swiper('.slides',{
+const swiperSlidesPriew = new Swiper('.slides',{
   pagination:{
     el: '.swiper-pagination',
     clickable: true,
@@ -150,9 +150,20 @@ const swiperTest = new Swiper('.slides',{
   loop : true,
   autoplay : {
     delay: 5000,
-
     disableOnInteraction: false,
   },
+});
+
+const swiperLineImgs = new Swiper('.line-imgs',{
+  pagination:{
+    clickable: true,
+  },
+  autoplay : {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 'auto',
+  slideToClickedSlide: false,
 });
 
 //Исполняймый код
