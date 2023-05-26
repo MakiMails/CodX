@@ -1,3 +1,6 @@
+
+
+
 //форма 'Sing Up'
 function setCustomsValidityForm() {
   let form = document.forms["forms-subs-events"];
@@ -137,6 +140,20 @@ function OnClickTapeControl(evt) {
     switchContentToTape(newIndexTabe);
   }
 }
+
+//swiper
+const swiperTest = new Swiper('.slides',{
+  pagination:{
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  loop : true,
+  autoplay : {
+    delay: 5000,
+
+    disableOnInteraction: false,
+  },
+});
 
 //Исполняймый код
 

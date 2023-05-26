@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="styles.css" />
     <title>Main</title>
   </head>
@@ -56,26 +60,59 @@
             diam arcu, porta et magna at
           </p>
         </div>
-        <section class="slides">
-          <h2 class="visually-hidden">slides</h2>
-          <img
-            class="slide"
-            src="img/picture_home1.jpg"
-            alt="picture home"
-            width="410"
-            height="410"
-          />
-          <div class="slides__control">
-            <button
-              class="slides__control-bnt-point slides__control-bnt-point-active"
-              type="button"
-            ></button>
-            <button class="slides__control-bnt-point" type="button"></button>
-            <button class="slides__control-bnt-point" type="button"></button>
+          <div class="slides swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  class="slide"
+                  src="img/picture_home1.jpg"
+                  alt="picture home"
+                  width="410"
+                  height="410"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="slide"
+                  src="img/picture_home2.jpg"
+                  alt="picture home"
+                  width="410"
+                  height="410"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="slide"
+                  src="img/picture_home3.jpg"
+                  alt="picture home"
+                  width="410"
+                  height="410"
+                />
+              </div>
+            </div>
+            <div class="ss"> 
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
-        </section>
       </section>
-      <section class="line-imgs">
+      <div class="slides swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            
+          </div>
+          <div class="swiper-slide">
+            
+          </div>
+          <div class="swiper-slide">
+            
+          </div>
+        </div>
+        <div class="ss"> 
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      
+      <!-- <section class="line-imgs">
         <h2 class="visually-hidden">line imgs</h2>
         <a href="#">
           <img
@@ -157,7 +194,7 @@
             height="152"
           />
         </a>
-      </section>
+      </section> -->
     </header>
     <main class="container">
       <h2 class="center-heading">Hey there, we are</h2>
@@ -165,7 +202,7 @@
         Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam
         arcu, porta et magna at
       </p>
-      
+
       <section class="tape">
         <div class="tape__control">
           <button type="button" class="tape-bnt tape-bnt-active" data-index-tabe-bnt="0">Jack</button>
@@ -512,7 +549,6 @@
         </section>
         <a href="#" class="bnt-base bnt-center">View all</a>
       </section>
-
       <form id="forms-subs-events" class="form-be-aware-of-event" action="#">
         <h2 class="form__title">Stay in the loop</h2>
         <p class="form__description">
@@ -644,6 +680,7 @@
         </form>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
