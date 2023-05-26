@@ -502,15 +502,16 @@
       </div>
     </footer>
     <div id="modal-feedback" class="modal modal-hidden">
-
-      <form id="modal-feedback__form" class="modal__form" action="">
-        <button class="bnt-rounded-corners bnt-close" type="button" name="bntClose"></button>
+      <div class="modal__wrap">
         <h2>This is a modal window</h2>
         <p>Leave a review about it</p>
-        <input class="form__input" type="text" name="userName" placeholder="Your name" maxlength="50">
-        <textarea class="form__textarea" type="text" name="feedbackText" maxlength="250" placeholder="Text feedback" ></textarea>
-        <button  class="bnt-rounded-corners" type="submit">Leave a review</button>
-      </form>
+        <button class="bnt-close" type="button"></button>
+        <form id="modal-feedback__form" class="modal__form" action="">
+          <input class="form__input" type="text" name="userName" placeholder="Your name" maxlength="50">
+          <textarea class="form__textarea" type="text" name="feedbackText" maxlength="250" placeholder="Text feedback" ></textarea>
+          <button  class="bnt-rounded-corners" type="submit">Leave a review</button>
+        </form>
+      </div>
     </div>
     <script src="../js/main.js"></script>
   </body>
