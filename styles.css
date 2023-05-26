@@ -257,8 +257,11 @@ p{
 }
 
 .tape__warp {
-  display: flex;
   margin-top: 64px;
+}
+
+.tape-item{
+  display: flex;
 }
 
 .info__profession {

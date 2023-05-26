@@ -96,7 +96,9 @@ function onDownKeyEscape(evt) {
 }
 
 function setEventsOnModalFeedback() {
-  setTimeout(() => { modalFeedback.addEventListener("click", onClickModalFeedback)}, 1000);
+  setTimeout(() => {
+    modalFeedback.addEventListener("click", onClickModalFeedback);
+  }, 1000);
   bntCloseModalFeedback.addEventListener("click", onClickBntCloseModalFeedback);
   document.addEventListener("keydown", onDownKeyEscape);
 }
@@ -111,10 +113,16 @@ function onClickBntOpenModalFeedback() {
 }
 
 
+//Табы
+
+
+
 //Исполняймый код
 setCustomsValidityForm();
 
 const bntOpenModelFeedback = document.getElementById("bnt-open-modal-feedback");
 bntOpenModelFeedback.addEventListener("click", onClickBntOpenModalFeedback);
+
+
 
 
