@@ -1,51 +1,49 @@
 //форма 'Sing Up'
-function setCustomsValidityForm() {
-  let form = document.forms["forms-subs-events"];
+const subsEventForm = document.forms["forms-subs-events"];
+const inputEmailSubsEventForm = subsEventForm.elements["emailUser"];
+const inputPhoneNumSubsEventForm = subsEventForm.elements["prohoneNumUser"];
 
-  let inputEmail = form.elements["emailUser"];
-  inputEmail.setCustomValidity("This field should not be empty");
-  inputEmail.addEventListener("input", onInputEmail);
-
-  let inputPhoneNum = form.elements["prohoneNumUser"];
-  inputPhoneNum.setCustomValidity("This field should not be empty");
-  inputPhoneNum.addEventListener("input", onInputPhoneNum);
+function setCustomsValiditySubsEventForm() {
+  inputEmailSubsEventForm.setCustomValidity("This field should not be empty");
+  inputEmailSubsEventForm.addEventListener("input", onInputEmailSubsEventForm);
+  
+  inputPhoneNumSubsEventForm.setCustomValidity("This field should not be empty");
+  inputPhoneNumSubsEventForm.addEventListener("input", onInputPhoneNumSubsEventForm);
 }
 
-function onInputEmail(event) {
-  let inputEmail = event.target;
-  cuctomValidEmail(inputEmail);
+function onInputEmailSubsEventForm() {
+  cuctomValidEmailSubsEventForm();
 }
 
-function onInputPhoneNum(event) {
-  let inputPhoneNum = event.target;
-  cuctomValidPhoneNum(inputPhoneNum);
+function onInputPhoneNumSubsEventForm() {
+  cuctomValidPhoneNumSubsEventForm();
 }
 
-function cuctomValidEmail(inputEmail) {
+function cuctomValidEmailSubsEventForm() {
   let emailPattern = /\S+@\S+\.\S+/;
 
-  if (inputEmail.value !== "") {
-    if (!emailPattern.test(inputEmail.value)) {
-      inputEmail.setCustomValidity("The email address was entered incorrectly");
+  if (inputEmailSubsEventForm.value !== "") {
+    if (!emailPattern.test(inputEmailSubsEventForm.value)) {
+      inputEmailSubsEventForm.setCustomValidity("The email address was entered incorrectly");
     } else {
-      inputEmail.setCustomValidity("");
+      inputEmailSubsEventForm.setCustomValidity("");
     }
   } else {
-    inputEmail.setCustomValidity("This field should not be empty");
+    inputEmailSubsEventForm.setCustomValidity("This field should not be empty");
   }
 }
 
-function cuctomValidPhoneNum(inputPhoneNum) {
+function cuctomValidPhoneNumSubsEventForm() {
   let phonePattern = /^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/;
 
-  if (inputPhoneNum.value !== "") {
-    if (!phonePattern.test(inputPhoneNum.value)) {
-      inputPhoneNum.setCustomValidity("Phone number entered incorrectly");
+  if (inputPhoneNumSubsEventForm.value !== "") {
+    if (!phonePattern.test(inputPhoneNumSubsEventForm.value)) {
+      inputPhoneNumSubsEventForm.setCustomValidity("Phone number entered incorrectly");
     } else {
-      inputPhoneNum.setCustomValidity("");
+      inputPhoneNumSubsEventForm.setCustomValidity("");
     }
   } else {
-    inputPhoneNum.setCustomValidity("This field should not be empty");
+    inputPhoneNumSubsEventForm.setCustomValidity("This field should not be empty");
   }
 }
 
@@ -197,7 +195,7 @@ const swiperLineImgs = new Swiper('.line-imgs',{
 AOS.init();
 
 //валидация формы
-setCustomsValidityForm();
+setCustomsValiditySubsEventForm();
 
 //модальное окно "Оставить отзыв"
 const bntOpenModelPayment= document.getElementById("bnt-open-modal-payment");
