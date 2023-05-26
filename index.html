@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <title>Main</title>
   </head>
@@ -53,48 +54,47 @@
       </nav>
       <section class="preview">
         <div class="preview__text">
-          <h2 class="preview-title">EXTRAORDINARY NFTs</h2>
-          <p class="preview-slogan">Change your Digital Experience</p>
-          <p>
+          <h2 class="preview-title" data-aos="fade-right" data-aos-duration="1050">EXTRAORDINARY NFTs</h2>
+          <p class="preview-slogan" data-aos="fade-right" >Change your Digital Experience</p>
+          <p data-aos="fade-right" data-aos-duration="1100">
             Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
             diam arcu, porta et magna at
           </p>
         </div>
-          <div class="slides swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  class="slide"
-                  src="img/picture_home1.jpg"
-                  alt="picture home"
-                  width="410"
-                  height="410"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  class="slide"
-                  src="img/picture_home2.jpg"
-                  alt="picture home"
-                  width="410"
-                  height="410"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  class="slide"
-                  src="img/picture_home3.jpg"
-                  alt="picture home"
-                  width="410"
-                  height="410"
-                />
-              </div>
+        <div class="slides swiper-container" data-aos="fade-left">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="slide"
+                src="img/picture_home1.jpg"
+                alt="picture home"
+                width="410"
+                height="410"
+              />
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide">
+              <img
+                class="slide"
+                src="img/picture_home2.jpg"
+                alt="picture home"
+                width="410"
+                height="410"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="slide"
+                src="img/picture_home3.jpg"
+                alt="picture home"
+                width="410"
+                height="410"
+              />
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </section>
-      
-      <div class="line-imgs swiper-container">
+      <div class="line-imgs swiper-container" data-aos="fade-right">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="#">
@@ -190,19 +190,30 @@
       </div>
     </header>
     <main class="container">
-      <h2 class="center-heading">Hey there, we are</h2>
-      <p>
+      <h2 class="center-heading" data-aos="fade-up">
+        Hey there, we are
+      </h2>
+      <p data-aos="fade-up" data-aos-duration="1500">
         Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam
         arcu, porta et magna at
       </p>
-
       <section class="tape">
-        <div class="tape__control">
-          <button type="button" class="tape-bnt tape-bnt-active" data-index-tabe-bnt="0">Jack</button>
-          <button type="button" class="tape-bnt" data-index-tabe-bnt="1">Suni</button>
-          <button type="button" class="tape-bnt" data-index-tabe-bnt="2">Colin</button>
+        <div class="tape__control" data-aos="fade-right">
+          <button
+            type="button"
+            class="tape-bnt tape-bnt-active"
+            data-index-tabe-bnt="0"
+          >
+            Jack
+          </button>
+          <button type="button" class="tape-bnt" data-index-tabe-bnt="1">
+            Suni
+          </button>
+          <button type="button" class="tape-bnt" data-index-tabe-bnt="2">
+            Colin
+          </button>
         </div>
-        <div class="tape__warp">
+        <div class="tape__warp" data-aos="fade-up">
           <div class="tape-item tape-item-visible">
             <img
               src="img/picture-post1.jpg"
@@ -230,11 +241,14 @@
               width="552"
               height="395"
             />
-            <div class="tape__warp-info ">
+            <div class="tape__warp-info">
               <p class="info__profession">Blockchain Programmer</p>
               <h3>Two tabe</h3>
               <p class="info__text">
-                Imperdiet imperdiet sed dictumst. Aenean dolor non nisi velit non sit venenatis mattis est. Eleifend amet, ipsum urna nulla hac vestibulum dapibus tortor, libero, mauris et accumsan habitasse vel amet 
+                Imperdiet imperdiet sed dictumst. Aenean dolor non nisi velit
+                non sit venenatis mattis est. Eleifend amet, ipsum urna nulla
+                hac vestibulum dapibus tortor, libero, mauris et accumsan
+                habitasse vel amet
               </p>
             </div>
           </div>
@@ -249,13 +263,16 @@
               <p class="info__profession">Programmer</p>
               <h3>3 Tape</h3>
               <p class="info__text">
-                Consectetur eleifend augue dictum. Ornare mattis augue cursus elit. In vitae in dolor sed imperdiet lectus mattis urna habitasse quam, leo, amet, sit elit. Adipiscing nec luctus cursus dictum dictum odio. Dapibus molestie ut. Nulla adipiscing malesuada nunc sapien et lacinia vel nec sit justo sit ar
+                Consectetur eleifend augue dictum. Ornare mattis augue cursus
+                elit. In vitae in dolor sed imperdiet lectus mattis urna
+                habitasse quam, leo, amet, sit elit. Adipiscing nec luctus
+                cursus dictum dictum odio. Dapibus molestie ut. Nulla adipiscing
+                malesuada nunc sapien et lacinia vel nec sit justo sit ar
               </p>
             </div>
           </div>
         </div>
       </section>
-
       <section class="post">
         <img
           class="post-img"
@@ -263,8 +280,9 @@
           alt="picture post 2"
           width="585"
           height="450"
+          data-aos="fade-right"
         />
-        <div class="post-text">
+        <div class="post-text" data-aos="fade-left">
           <h2 class="post-text__heading">OUR WORK</h2>
           <p class="post-text__question">“Um… what’s going on here?”</p>
           <p>
@@ -277,7 +295,7 @@
       </section>
       <section class="post">
         <ul>
-          <li>
+          <li data-aos="fade-right">
             <span>01</span>
             <h3>Motion Graphic</h3>
             <p>
@@ -285,7 +303,7 @@
               Donec diam arcu, porta et magna at
             </p>
           </li>
-          <li>
+          <li data-aos="fade-right">
             <span>02</span>
             <h3>Digital Illustration</h3>
             <p>
@@ -293,7 +311,7 @@
               Donec diam arcu, porta et magna at
             </p>
           </li>
-          <li>
+          <li data-aos="fade-right">
             <span>03</span>
             <h3>Photography</h3>
             <p>
@@ -308,9 +326,10 @@
           alt="picture post 3"
           width="552"
           height="596"
+          data-aos="fade-left"
         />
       </section>
-      <section class="post-join">
+      <section class="post-join" data-aos="fade-up">
         <div class="post-join__text">
           <h2>Join Us and Developer uor most precious NFT</h2>
           <p>
@@ -329,7 +348,12 @@
       <section class="colection-nft">
         <h2 class="center-heading">Browse by Collections</h2>
         <div class="catalog catalog-colection">
-          <a class="colection-nft-card" href="#">
+          <a
+            class="colection-nft-card"
+            href="#"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             <img
               class="colection-nft-card__img"
               src="img/collect/picture-category1.jpg"
@@ -339,33 +363,49 @@
             />
             <h3 class="colection-nft-card__title">Collectibles</h3>
           </a>
-          <a class="colection-nft-card" href="#">
+          <a
+            class="colection-nft-card"
+            href="#"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             <img
-              class="colection-card__img"
+              class="colection-nft-card__img"
               src="img/collect/picture-category2.jpg"
-              alt="picture category 1"
+              alt="picture category 2"
               width="358"
               height="221"
             />
             <h3 class="colection-nft-card__title">Collectibles</h3>
           </a>
-          <a class="colection-nft-card" href="#">
+          <a
+            class="colection-nft-card"
+            href="#"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <img
               class="colection-nft-card__img"
               src="img/collect/picture-category3.jpg"
-              alt="picture category 1"
+              alt="picture category 3"
               width="358"
               height="221"
             />
             <h3 class="colection-nft-card__title">Collectibles</h3>
           </a>
         </div>
-        <a href="#" class="bnt-base bnt-center">View all</a>
+        <a
+          href="#"
+          class="bnt-base bnt-center"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          >View all</a
+        >
       </section>
       <section class="top-nft">
-        <h2 class="center-heading">Top NFT</h2>
+        <h2 class="center-heading" data-aos="fade-up">Top NFT</h2>
         <section class="catalog catalog-top-nft">
-          <div class="top-nft-card">
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="1000">
             <img
               class="top-nft-card__img"
               src="img/shop/picture-TopNFT1.jpg"
@@ -394,7 +434,7 @@
               </button>
             </div>
           </div>
-          <div class="top-nft-card">
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="1500">
             <img
               class="top-nft-card__img"
               src="img/shop/picture-TopNFT2.jpg"
@@ -423,7 +463,7 @@
               </button>
             </div>
           </div>
-          <div class="top-nft-card">
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="2000">
             <img
               class="top-nft-card__img"
               src="img/shop/picture-TopNFT3.jpg"
@@ -452,7 +492,7 @@
               </button>
             </div>
           </div>
-          <div class="top-nft-card">
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="1000">
             <img
               class="top-nft-card__img"
               src="img/shop/picture-TopNFT4.jpg"
@@ -481,7 +521,7 @@
               </button>
             </div>
           </div>
-          <div class="top-nft-card">
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="1500">
             <img
               class="top-nft-card__img"
               src="img/shop/picture-TopNFT5.jpg"
@@ -510,7 +550,7 @@
               </button>
             </div>
           </div>
-          <div class="top-nft-card">
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="2000">
             <img
               class="top-nft-card__img"
               src="img/shop/picture-TopNFT6.jpg"
@@ -540,37 +580,53 @@
             </div>
           </div>
         </section>
-        <a href="#" class="bnt-base bnt-center">View all</a>
-      </section>
-      <form id="forms-subs-events" class="form-be-aware-of-event" action="#">
-        <h2 class="form__title">Stay in the loop</h2>
-        <p class="form__description">
-          Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
-          diam arcu, porta et magna at
-        </p>
-        <input
-          class="input-email form__input"
-          type="email"
-          name="emailUser"
-          placeholder="Your email address"
-        />
-        <input
-          class="input-phone-num form__input"
-          type="text"
-          name="prohoneNumUser"
-          placeholder="Your phone number"
-        />
-        <button
-          class="bnt-rounded-corners"
-          type="submit"
-          form="forms-subs-events"
-          name="submitSingUp"
+        <a
+          href="#"
+          class="bnt-base bnt-center"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          >View all</a
         >
-          Sing Up
-        </button>
-      </form>
+      </section>
+      <section>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="form__title">Stay in the loop</h2>
+          <p class="form__description">
+            Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
+            diam arcu, porta et magna at
+          </p>
+        </div>
+        <form id="forms-subs-events" class="form-be-aware-of-event" action="#">
+          <input
+            class="input-email form__input"
+            type="email"
+            name="emailUser"
+            placeholder="Your email address"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          />
+          <input
+            class="input-phone-num form__input"
+            type="text"
+            name="prohoneNumUser"
+            placeholder="Your phone number"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          />
+          <button
+            class="bnt-rounded-corners"
+            type="submit"
+            form="forms-subs-events"
+            name="submitSingUp"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            Sing Up
+          </button>
+        </form>
+      </section>
     </main>
-    <footer class="container">
+    <footer class="container" data-aos="fade-up" data-aos-duration="1500">
       <h2 class="visually-hidden">footer info</h2>
       <div class="footer-container">
         <div class="footer-container-list">
@@ -641,18 +697,18 @@
         <div class="footer__text">
           <p>© 2022 All rights reserved.</p>
           <p>Created By <span>Udesly</span> Powered By <span>Webflow</span></p>
-          <button id="bnt-open-modal-feedback" class="bnt-base" type="button">
+          <button id="bnt-open-modal-payment" class="bnt-base" type="button">
             Открыть модальное окно
           </button>
         </div>
       </div>
     </footer>
-    <div id="modal-feedback" class="modal modal-hidden">
+    <div id="modal-payment" class="modal modal-hidden">
       <div class="modal__wrap">
         <h2>This is a modal window</h2>
         <p>Leave a review about it</p>
         <button class="bnt-close" type="button"></button>
-        <form id="modal-feedback__form" class="modal__form" action="">
+        <form id="modal-payment__form" class="modal__form" action="">
           <input
             class="form__input"
             type="text"
@@ -660,13 +716,27 @@
             placeholder="Your name"
             maxlength="50"
           />
-          <textarea
-            class="form__textarea"
+          <input
+            id="modal-payment-inpunt-phone"
+            class="form__input"
             type="text"
-            name="feedbackText"
-            maxlength="250"
-            placeholder="Text feedback"
-          ></textarea>
+            name="userPhoneNum"
+            placeholder="Your phone number"
+          />
+          <input
+            id="modal-payment-inpunt-credit-card"
+            class="form__input"
+            type="text"
+            name="userCreditCard"
+            placeholder="Your number credit card"
+          />
+          <input
+            id="modal-payment-inpunt-date-birth"
+            class="form__input"
+            type="text"
+            name="userDateOfBirth"
+            placeholder="Your number credit card"
+          />
           <button class="bnt-rounded-corners" type="submit">
             Leave a review
           </button>
@@ -674,6 +744,9 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/cleave.js"></script>
+    <script src="../js/cleave-phone.by.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>

@@ -1,6 +1,3 @@
-
-
-
 //форма 'Sing Up'
 function setCustomsValidityForm() {
   let form = document.forms["forms-subs-events"];
@@ -53,67 +50,85 @@ function cuctomValidPhoneNum(inputPhoneNum) {
 }
 
 //Модальное окно "Оставить отзыв"
-const modalFeedback = document.getElementById("modal-feedback");
-const modalFeedbackWrap = modalFeedback.querySelector(".modal__wrap");
-const bntCloseModalFeedback = modalFeedbackWrap.querySelector(".bnt-close");
-const formFeedback = modalFeedbackWrap.querySelector("#modal-feedback__form");
-const inputUserName = formFeedback.elements["userName"];
-const textareaFeedbackText = formFeedback.elements["feedbackText"];
+const modalPayment = document.getElementById("modal-payment");
+const modalPaymentWrap = modalPayment.querySelector(".modal__wrap");
+const bntCloseModalPayment = modalPaymentWrap.querySelector(".bnt-close");
+const formPayment = modalPaymentWrap.querySelector("#modal-payment__form");
+const inputUserName = formPayment.elements["userName"];
+const cleavePaymentPhone = new Cleave('#modal-payment-inpunt-phone', {
+  phone: true,
+  prefix: '+375',
+  delimiter: '-',
+  phoneRegionCode: 'BY',
+});
+const cleavePaymentCreditCard = new Cleave('#modal-payment-inpunt-credit-card', {
+  creditCard: true,
+  creditCardType: 'visa,mastercard',
+});
+const cleavePaymentdateOfBirth = new Cleave('#modal-payment-inpunt-date-birth',{
+  date: true,
+  delimiter: '-',
+  datePattern: ['Y', 'm', 'd'],
+  dateMin: '1970-01-01',
+  dateMax: '2023-12-31',
+});
 let timer;
 
-function removeEventsOnFeedbackModelWindow() {
-  modalFeedback.removeEventListener("click", onClickModalFeedback);
-  bntCloseModalFeedback.removeEventListener(
+function removeEventsOnPaymentModelWindow() {
+  modalPayment.removeEventListener("click", onClickModalPayment);
+  bntCloseModalPayment.removeEventListener(
     "click",
-    onClickBntCloseModalFeedback
+    onClickBntCloseModalPayment
   );
   document.removeEventListener("keydown", onDownKeyEscape);
 }
 
 function clearFieldFormFeedback() {
   inputUserName.value = "";
-  textareaFeedbackText.value = "";
+  cleavePaymentPhone.setRawValue('');
+  cleavePaymentCreditCard.setRawValue('');
+  cleavePaymentdateOfBirth.setRawValue('');
 }
 
-function closeModalFeedback() {
-  removeEventsOnFeedbackModelWindow();
-  modalFeedback.classList.add("modal-hidden");
+function closeModalPayment() {
+  removeEventsOnPaymentModelWindow();
+  modalPayment.classList.add("modal-hidden");
   clearFieldFormFeedback();
 }
 
-function onClickModalFeedback(evt) {
-  if (evt.target === modalFeedback) {
-    closeModalFeedback();
+function onClickModalPayment(evt) {
+  if (evt.target === modalPayment) {
+    closeModalPayment();
   }
 }
 
-function onClickBntCloseModalFeedback(evt) {
-  closeModalFeedback();
+function onClickBntCloseModalPayment(evt) {
+  closeModalPayment();
 }
 
 function onDownKeyEscape(evt) {
   if (evt.key === "Escape") {
     evt.preventDefault();
-    closeModalFeedback();
+    closeModalPayment();
   }
 }
 
-function setEventsOnModalFeedback() {
+function setEventsOnModalPayment() {
   timer = setTimeout(() => {
-    modalFeedback.addEventListener("click", onClickModalFeedback);
+    modalPayment.addEventListener("click", onClickModalPayment);
   }, 1000);
-  bntCloseModalFeedback.addEventListener("click", onClickBntCloseModalFeedback);
+  bntCloseModalPayment.addEventListener("click", onClickBntCloseModalPayment);
   document.addEventListener("keydown", onDownKeyEscape);
 }
 
-function showModalFeedback() {
+function showModalPayment() {
   clearTimeout(timer);
-  setEventsOnModalFeedback();
-  modalFeedback.classList.remove("modal-hidden");
+  setEventsOnModalPayment();
+  modalPayment.classList.remove("modal-hidden");
 }
 
-function onClickBntOpenModalFeedback() {
-  showModalFeedback();
+function onClickBntOpenModalPayment() {
+  showModalPayment();
 }
 
 //Табы
@@ -167,13 +182,14 @@ const swiperLineImgs = new Swiper('.line-imgs',{
 });
 
 //Исполняймый код
+AOS.init();
 
 //валидация формы
 setCustomsValidityForm();
 
 //модальное окно "Оставить отзыв"
-const bntOpenModelFeedback = document.getElementById("bnt-open-modal-feedback");
-bntOpenModelFeedback.addEventListener("click", onClickBntOpenModalFeedback);
+const bntOpenModelPayment= document.getElementById("bnt-open-modal-payment");
+bntOpenModelPayment.addEventListener("click", onClickBntOpenModalPayment);
 
 //Табы
 tapeControl.addEventListener("click", OnClickTapeControl);
