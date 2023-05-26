@@ -249,6 +249,13 @@ p{
   border: 1px solid #2f2f2f;
   border-radius: 30px;
   background-color: #ffffff;
+
+  transition-duration: 0.2s;
+}
+
+.tape-bnt:hover{
+  color: #ffffff;
+  background-color: #535252;
 }
 
 .tape-bnt-active {
@@ -256,11 +263,16 @@ p{
   background-color: #2f2f2f;
 }
 
-.tape__warp {
+.tape__warp{
   margin-top: 64px;
 }
 
 .tape-item{
+  display: none;
+  
+}
+
+.tape-item-visible{
   display: flex;
 }
 

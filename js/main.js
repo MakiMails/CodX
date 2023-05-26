@@ -1,4 +1,4 @@
-//форма "Sing Up"
+//форма 'Sing Up'
 function setCustomsValidityForm() {
   let form = document.forms["forms-subs-events"];
 
@@ -49,14 +49,14 @@ function cuctomValidPhoneNum(inputPhoneNum) {
   }
 }
 
-
-//Модальное окно "Отзывы"
+//Модальное окно "Оставить отзыв"
 const modalFeedback = document.getElementById("modal-feedback");
 const modalFeedbackWrap = modalFeedback.querySelector(".modal__wrap");
 const bntCloseModalFeedback = modalFeedbackWrap.querySelector(".bnt-close");
 const formFeedback = modalFeedbackWrap.querySelector("#modal-feedback__form");
 const inputUserName = formFeedback.elements["userName"];
 const textareaFeedbackText = formFeedback.elements["feedbackText"];
+let timer;
 
 function removeEventsOnFeedbackModelWindow() {
   modalFeedback.removeEventListener("click", onClickModalFeedback);
@@ -96,7 +96,7 @@ function onDownKeyEscape(evt) {
 }
 
 function setEventsOnModalFeedback() {
-  setTimeout(() => {
+  timer = setTimeout(() => {
     modalFeedback.addEventListener("click", onClickModalFeedback);
   }, 1000);
   bntCloseModalFeedback.addEventListener("click", onClickBntCloseModalFeedback);
@@ -104,6 +104,7 @@ function setEventsOnModalFeedback() {
 }
 
 function showModalFeedback() {
+  clearTimeout(timer);
   setEventsOnModalFeedback();
   modalFeedback.classList.remove("modal-hidden");
 }
@@ -112,17 +113,39 @@ function onClickBntOpenModalFeedback() {
   showModalFeedback();
 }
 
-
 //Табы
+const tape = document.querySelector(".tape");
+const tapeControl = tape.querySelector(".tape__control");
+const tapeBnt = tapeControl.querySelectorAll(".tape-bnt");
+const tapeWarp = tape.querySelector(".tape__warp");
+const tapeItems = tapeWarp.querySelectorAll(".tape-item");
+let currentIndexTabe = 0;
 
+function switchContentToTape(newIndexTabe) {
+  tapeBnt[currentIndexTabe].classList.remove("tape-bnt-active");
+  tapeItems[currentIndexTabe].classList.remove("tape-item-visible");
 
+  tapeBnt[newIndexTabe].classList.add("tape-bnt-active");
+  tapeItems[newIndexTabe].classList.add("tape-item-visible");
+
+  currentIndexTabe = newIndexTabe;
+}
+
+function OnClickTapeControl(evt) {
+  const newIndexTabe = evt.target.getAttribute("data-index-tabe-bnt");
+  if (newIndexTabe !== null) {
+    switchContentToTape(newIndexTabe);
+  }
+}
 
 //Исполняймый код
+
+//валидация формы
 setCustomsValidityForm();
 
+//модальное окно "Оставить отзыв"
 const bntOpenModelFeedback = document.getElementById("bnt-open-modal-feedback");
 bntOpenModelFeedback.addEventListener("click", onClickBntOpenModalFeedback);
 
-
-
-
+//Табы
+tapeControl.addEventListener("click", OnClickTapeControl);
