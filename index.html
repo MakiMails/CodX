@@ -705,8 +705,8 @@
     </footer>
     <div id="modal-payment" class="modal modal-hidden">
       <div class="modal__wrap">
-        <h2>This is a modal window</h2>
-        <p>Leave a review about it</p>
+        <h2>Modal window</h2>
+        <p>Created for tasks 6 and 8</p>
         <button class="bnt-close" type="button"></button>
         <form id="modal-payment__form" class="modal__form" action="">
           <input
@@ -714,7 +714,10 @@
             type="text"
             name="userName"
             placeholder="Your name"
-            maxlength="50"
+            data-parsley-minlength="3"
+            data-parsley-maxlength="20"
+            data-parsley-error-message="Name - the minimum number of characters is 3, the maximum is 20"
+            required
           />
           <input
             id="modal-payment-inpunt-phone"
@@ -722,6 +725,9 @@
             type="text"
             name="userPhoneNum"
             placeholder="Your phone number"
+            data-parsley-minlength="17"
+            data-parsley-error-message="Phone number - consists of 12 digits"
+            required
           />
           <input
             id="modal-payment-inpunt-credit-card"
@@ -729,14 +735,21 @@
             type="text"
             name="userCreditCard"
             placeholder="Your number credit card"
+            data-parsley-minlength="16"
+            data-parsley-error-message="Number credit card - consists of 16 digits"
+            required
           />
           <input
             id="modal-payment-inpunt-date-birth"
             class="form__input"
             type="text"
             name="userDateOfBirth"
-            placeholder="Your number credit card"
+            placeholder="Your date of birth"
+            data-parsley-minlength="8"
+            data-parsley-error-message="Date of birth - contains day, month and year"
+            required
           />
+          <div class="error-container"></div>
           <button class="bnt-rounded-corners" type="submit">
             Leave a review
           </button>
@@ -747,6 +760,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/cleave.js"></script>
     <script src="../js/cleave-phone.by.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/parsley.min.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>

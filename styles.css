@@ -66,6 +66,7 @@ input[type="radio"].visually-hidden {
 .container {
   margin: 0 auto;
   width: 1200px;
+  overflow: hidden;
 }
 
 nav {
@@ -767,15 +768,15 @@ a.bnt-center{
 .modal__wrap{
   position: absolute;
   width: 500px;
-  height: 500px;
 
   padding: 30px;
 
-  top: calc(50% - 275px);
-  left: calc(50% - 275px);
+  top: 50%;
+  left: 50%;
 
   border-radius: 30px;
   background-color: #ffffff;
+  transform: translate(-50%, -50%);
 }
 
 .modal__form{
@@ -784,27 +785,14 @@ a.bnt-center{
 }
 
 .modal__form > .bnt-rounded-corners{
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
-.form__textarea {
-  padding: 32px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin: 0;
-  margin-top: 16px;
-  height: 200px;
-
-  font-family: "OutfitRegular", sans-serif;
-  font-size: 14px;
-  color: #2f2f2f;
-
-  resize: none;
-
-  border: 2px solid transparent;
-  border-radius: 20px;
-  background-color: #f6f6f6;
+.error{
+  background: rebeccapurple;
 }
+
+
 
 
 /* 

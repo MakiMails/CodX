@@ -49,7 +49,7 @@ function cuctomValidPhoneNum(inputPhoneNum) {
   }
 }
 
-//Модальное окно "Оставить отзыв"
+//Модальное окно "Покупка"
 const modalPayment = document.getElementById("modal-payment");
 const modalPaymentWrap = modalPayment.querySelector(".modal__wrap");
 const bntCloseModalPayment = modalPaymentWrap.querySelector(".bnt-close");
@@ -68,10 +68,22 @@ const cleavePaymentCreditCard = new Cleave('#modal-payment-inpunt-credit-card', 
 const cleavePaymentdateOfBirth = new Cleave('#modal-payment-inpunt-date-birth',{
   date: true,
   delimiter: '-',
-  datePattern: ['Y', 'm', 'd'],
+  datePattern: ['d', 'm', 'Y'],
   dateMin: '1970-01-01',
   dateMax: '2023-12-31',
 });
+const parsleyMobalPaymentForm = $('#modal-payment__form').parsley({
+  errorsContainer: function(ParsleyField){
+    return ParsleyField.$element.parent().find('.error-container');
+  }
+});
+parsleyMobalPaymentForm.on('field:error', function(){
+  this.$element.addClass('form__input-error');
+});
+parsleyMobalPaymentForm.on('field:success', function() {
+  this.$element.removeClass('form__input-error');
+});
+
 let timer;
 
 function removeEventsOnPaymentModelWindow() {
@@ -134,16 +146,16 @@ function onClickBntOpenModalPayment() {
 //Табы
 const tape = document.querySelector(".tape");
 const tapeControl = tape.querySelector(".tape__control");
-const tapeBnt = tapeControl.querySelectorAll(".tape-bnt");
+const tapeBnts = tapeControl.querySelectorAll(".tape-bnt");
 const tapeWarp = tape.querySelector(".tape__warp");
 const tapeItems = tapeWarp.querySelectorAll(".tape-item");
 let currentIndexTabe = 0;
 
 function switchContentToTape(newIndexTabe) {
-  tapeBnt[currentIndexTabe].classList.remove("tape-bnt-active");
+  tapeBnts[currentIndexTabe].classList.remove("tape-bnt-active");
   tapeItems[currentIndexTabe].classList.remove("tape-item-visible");
 
-  tapeBnt[newIndexTabe].classList.add("tape-bnt-active");
+  tapeBnts[newIndexTabe].classList.add("tape-bnt-active");
   tapeItems[newIndexTabe].classList.add("tape-item-visible");
 
   currentIndexTabe = newIndexTabe;
