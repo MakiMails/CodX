@@ -53,16 +53,19 @@ const modalPaymentWrap = modalPayment.querySelector(".modal__wrap");
 const bntCloseModalPayment = modalPaymentWrap.querySelector(".bnt-close");
 const formPayment = modalPaymentWrap.querySelector("#modal-payment__form");
 const inputUserName = formPayment.elements["userName"];
+
 const cleavePaymentPhone = new Cleave('#modal-payment-inpunt-phone', {
   phone: true,
   prefix: '+375',
   delimiter: '-',
   phoneRegionCode: 'BY',
 });
+
 const cleavePaymentCreditCard = new Cleave('#modal-payment-inpunt-credit-card', {
   creditCard: true,
   creditCardType: 'visa,mastercard',
 });
+
 const cleavePaymentdateOfBirth = new Cleave('#modal-payment-inpunt-date-birth',{
   date: true,
   delimiter: '-',
@@ -70,14 +73,17 @@ const cleavePaymentdateOfBirth = new Cleave('#modal-payment-inpunt-date-birth',{
   dateMin: '1970-01-01',
   dateMax: '2023-12-31',
 });
+
 const parsleyModalPaymentForm = $('#modal-payment__form').parsley({
   errorsContainer: function(ParsleyField){
     return ParsleyField.$element.parent().find('.error-container');
   }
 });
+
 parsleyModalPaymentForm.on('field:error', function(){
   this.$element.addClass('form__input-error');
 });
+
 parsleyModalPaymentForm.on('field:success', function() {
   this.$element.removeClass('form__input-error');
 });
@@ -132,7 +138,9 @@ function setEventsOnModalPayment() {
 }
 
 function showModalPayment() {
-  clearTimeout(timer);
+  if (timer) {
+    clearTimeout(timer);
+  }
   setEventsOnModalPayment();
   modalPayment.classList.remove("modal-hidden");
 }
@@ -180,9 +188,6 @@ const swiperSlidesPriew = new Swiper('.slides',{
 });
 
 const swiperLineImgs = new Swiper('.line-imgs',{
-  pagination:{
-    clickable: true,
-  },
   autoplay : {
     delay: 5000,
     disableOnInteraction: false,
