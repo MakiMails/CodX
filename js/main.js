@@ -70,15 +70,15 @@ const cleavePaymentdateOfBirth = new Cleave('#modal-payment-inpunt-date-birth',{
   dateMin: '1970-01-01',
   dateMax: '2023-12-31',
 });
-const parsleyMobalPaymentForm = $('#modal-payment__form').parsley({
+const parsleyModalPaymentForm = $('#modal-payment__form').parsley({
   errorsContainer: function(ParsleyField){
     return ParsleyField.$element.parent().find('.error-container');
   }
 });
-parsleyMobalPaymentForm.on('field:error', function(){
+parsleyModalPaymentForm.on('field:error', function(){
   this.$element.addClass('form__input-error');
 });
-parsleyMobalPaymentForm.on('field:success', function() {
+parsleyModalPaymentForm.on('field:success', function() {
   this.$element.removeClass('form__input-error');
 });
 
@@ -197,7 +197,7 @@ AOS.init();
 //валидация формы
 setCustomsValiditySubsEventForm();
 
-//модальное окно "Оставить отзыв"
+//модальное окно "Покупка"
 const bntOpenModelPayment= document.getElementById("bnt-open-modal-payment");
 bntOpenModelPayment.addEventListener("click", onClickBntOpenModalPayment);
 

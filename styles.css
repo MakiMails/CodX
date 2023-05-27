@@ -629,7 +629,7 @@ p{
   list-style: none;
 }
 
-.item__list-link > li {
+.footer-link{
   margin-bottom: 8px;
 
   font-family: "OutfitRegular", sans-serif;
@@ -787,15 +787,3 @@ a.bnt-center{
 .modal__form > .bnt-rounded-corners{
   margin-top: 20px;
 }
-
-.error{
-  background: rebeccapurple;
-}
-
-
-
-
-/* 
-Пометки
-Переделать отступ у bnt-base - убрал отступ вообше
-Сделать силектор который ставит кнопку в центер */
