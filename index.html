@@ -1,116 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Main</title>
   </head>
   <body>
     <header class="container">
+      <h1 class="visually-hidden">Website for sale and promotion NFTs</h1>
       <nav>
-        <a class="logo" href="#"
-          ><img src="img/icons/logo.svg" alt="CodX" width="94" height="31"
-        /></a>
+        <a class="logo" href="#">
+          <img src="img/icons/logo.svg" alt="CodX" width="94" height="31">
+        </a>
         <div class="nav-links">
           <a class="nav-link" href="#">About us</a>
           <a class="nav-link" href="#">NFTs</a>
           <a class="nav-link" href="#">Contact</a>
         </div>
         <div class="nav-links-icons">
-          <a class="nav-link-icon" href="#"
-            ><img
+          <a class="nav-link-icon" href="#">
+            <img
               src="img/icons/twitter.svg"
               alt="Twitter"
               width="18"
               height="18"
-          /></a>
-          <a class="nav-link-icon" href="#"
-            ><img
+            >
+          </a>
+          <a class="nav-link-icon" href="#">
+            <img
               src="img/icons/inst.svg"
               alt="Instagram"
               width="18"
               height="18"
-          /></a>
-          <a class="nav-link-icon" href="#"
-            ><img
+            >
+          </a>
+          <a class="nav-link-icon" href="#">
+            <img
               src="img/icons/facebook.svg"
               alt="Facebook"
               width="18"
               height="18"
-          /></a>
+            >
+          </a>
         </div>
-        <button class="nav-bnt" type="button">View in OpenSea</button>
+        <a href="#" class="bnt-rounded-corners"> View in OpenSea </a>
       </nav>
       <section class="preview">
         <div class="preview__text">
-          <p>EXTRAORDINARY NFTs</p>
-          <h2>Change your Digital Experience</h2>
-          <p>
+          <h2
+            class="preview-title"
+            data-aos="fade-right"
+            data-aos-duration="1050"
+          >
+            EXTRAORDINARY NFTs
+          </h2>
+          <p class="preview-slogan" data-aos="fade-right">
+            Change your Digital Experience
+          </p>
+          <p data-aos="fade-right" data-aos-duration="1100">
             Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
             diam arcu, porta et magna at
           </p>
         </div>
-        <section class="slides">
-          <img
-            class="slide"
-            src="img/picture_home1.jpg"
-            alt=""
-            width="410"
-            height="410"
-          />
-          <div class="slides__control">
-            <button
-              class="slides__control-bnt-point slides__control-bnt-point-active"
-              type="button"
-            ></button>
-            <button class="slides__control-bnt-point" type="button"></button>
-            <button class="slides__control-bnt-point" type="button"></button>
+        <div class="slides swiper-container" data-aos="fade-left">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="slide"
+                src="img/picture_home1.jpg"
+                alt="picture home"
+                width="410"
+                height="410"
+              >
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="slide"
+                src="img/picture_home2.jpg"
+                alt="picture home"
+                width="410"
+                height="410"
+              >
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="slide"
+                src="img/picture_home3.jpg"
+                alt="picture home"
+                width="410"
+                height="410"
+              >
+            </div>
           </div>
-        </section>
+          <div class="swiper-pagination"></div>
+        </div>
       </section>
-      <section class="scrollable-line-imgs">
-        <img src="" alt="1" width="152" height="152" />
-        <img src="" alt="2" width="152" height="152" />
-        <img src="" alt="3" width="152" height="152" />
-        <img src="" alt="4" width="152" height="152" />
-        <img src="" alt="5" width="152" height="152" />
-      </section>
-      <h1 style="color: red">В РАЗРАБОТКЕ</h1>
+      <div class="line-imgs swiper-container" data-aos="fade-right">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="img/line/picture_slider1.jpg"
+                alt=""
+                width="152"
+                height="152"
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="img/line/picture_slider2.jpg"
+                alt=""
+                width="152"
+                height="152"
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="img/line/picture_slider3.jpg"
+                alt=""
+                width="152"
+                height="152"
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="img/line/picture_slider6.jpg"
+                alt=""
+                width="152"
+                height="152"
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="img/line/picture_slider7.jpg"
+                alt=""
+                width="152"
+                height="152"
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="img/line/picture_slider8.jpg"
+                alt=""
+                width="152"
+                height="152"
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="img/line/picture_slider9.jpg"
+                alt=""
+                width="152"
+                height="152"
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="img/line/picture_slider10.jpg"
+                alt=""
+                width="152"
+                height="152"
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="img/line/picture_slider11.jpg"
+                alt=""
+                width="152"
+                height="152"
+              >
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
     <main class="container">
-      <h2 class="center-heading">Hey there, we are</h2>
-      <p>
+      <h2 class="center-heading" data-aos="fade-up">Hey there, we are</h2>
+      <p data-aos="fade-up" data-aos-duration="1500">
         Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam
         arcu, porta et magna at
       </p>
       <section class="tape">
-        <div class="tape__control">
-          <button type="button" class="tape-bnt tape-bnt-active">Jack</button>
-          <button type="button" class="tape-bnt">Suni</button>
-          <button type="button" class="tape-bnt">Colin</button>
+        <div class="tape__control" data-aos="fade-right">
+          <button
+            type="button"
+            class="tape-bnt tape-bnt-active"
+            data-index-tabe-bnt="0"
+          >
+            Jack
+          </button>
+          <button type="button" class="tape-bnt" data-index-tabe-bnt="1">
+            Suni
+          </button>
+          <button type="button" class="tape-bnt" data-index-tabe-bnt="2">
+            Colin
+          </button>
+          <button type="button" class="tape-bnt" data-index-tabe-bnt="3">
+            Colin
+          </button>
         </div>
-        <div class="tape__warp">
-          <img
-            src="img/picture-post1.jpg"
-            alt="picture post"
-            width="552"
-            height="395"
-          />
-          <div class="tape__warp-info">
-            <p class="info__profession">Digital Artist</p>
-            <h3>Pellentesque blandit in quam rhoncus</h3>
-            <p class="info__text">
-              Suspendisse ante mauris, volutpat congue sem ac, ultrices tempor
-              lorem. Nullam eget vehicula tellus, ac consectetur urna. Mauris
-              tincidunt, libero id ultrices tincidunt, mi leo pharetra dolor,
-              sed luctus dui ipsum et augue. Integer non quam feugiat, porttitor
-              libero a, tempor neque. Nulla ac orci mauris. Quisque nisi nisl,
-              rutrum ac diam et, semper commodo quam
-            </p>
+        <div class="tape__warp" data-aos="fade-up">
+          <div class="tape-item tape-item-visible">
+            <img
+              src="img/picture-post1.jpg"
+              alt="picture post"
+              width="552"
+              height="395"
+            >
+            <div class="tape__warp-info">
+              <p class="info__profession">Digital Artist</p>
+              <h3>Pellentesque blandit in quam rhoncus</h3>
+              <p class="info__text">
+                Suspendisse ante mauris, volutpat congue sem ac, ultrices tempor
+                lorem. Nullam eget vehicula tellus, ac consectetur urna. Mauris
+                tincidunt, libero id ultrices tincidunt, mi leo pharetra dolor,
+                sed luctus dui ipsum et augue. Integer non quam feugiat,
+                porttitor libero a, tempor neque. Nulla ac orci mauris. Quisque
+                nisi nisl, rutrum ac diam et, semper commodo quam
+              </p>
+            </div>
+          </div>
+          <div class="tape-item">
+            <img
+              src="img/picture-post1.jpg"
+              alt="picture post"
+              width="552"
+              height="395"
+            >
+            <div class="tape__warp-info">
+              <p class="info__profession">Blockchain Programmer</p>
+              <h3>Two tabe</h3>
+              <p class="info__text">
+                Imperdiet imperdiet sed dictumst. Aenean dolor non nisi velit
+                non sit venenatis mattis est. Eleifend amet, ipsum urna nulla
+                hac vestibulum dapibus tortor, libero, mauris et accumsan
+                habitasse vel amet
+              </p>
+            </div>
+          </div>
+          <div class="tape-item">
+            <img
+              src="img/picture-post1.jpg"
+              alt="picture post"
+              width="552"
+              height="395"
+            >
+            <div class="tape__warp-info">
+              <p class="info__profession">Programmer</p>
+              <h3>3 Tape</h3>
+              <p class="info__text">
+                Consectetur eleifend augue dictum. Ornare mattis augue cursus
+                elit. In vitae in dolor sed imperdiet lectus mattis urna
+                habitasse quam, leo, amet, sit elit. Adipiscing nec luctus
+                cursus dictum dictum odio. Dapibus molestie ut. Nulla adipiscing
+                malesuada nunc sapien et lacinia vel nec sit justo sit ar
+              </p>
+            </div>
+          </div>
+          <div class="tape-item">
+            <img
+              src="img/picture-post1.jpg"
+              alt="picture post"
+              width="552"
+              height="395"
+            >
+            <div class="tape__warp-info">
+              <p class="info__profession">Programmer</p>
+              <h3>3 Tape34534534</h3>
+              <p class="info__text">
+                Consectetur eleifend augue dictum. Ornare mattis augue cursus
+                elit. In vitae in dolor sed imperdiet lectus mattis urna
+                habitasse quam, leo, amet, sit elit. Adipiscing nec luctus
+                cursus dictum dictum odio. Dapibus molestie ut. Nulla adipiscing
+                malesuada nunc sapien et lacinia vel nec sit justo sit ar
+              </p>
+            </div>
           </div>
         </div>
+        
       </section>
       <section class="post">
         <img
@@ -119,31 +308,32 @@
           alt="picture post 2"
           width="585"
           height="450"
-        />
-        <div class="post-text">
-          <h3 class="post-text__heading">OUR WORK</h3>
+          data-aos="fade-right"
+        >
+        <div class="post-text" data-aos="fade-left">
+          <h2 class="post-text__heading">OUR WORK</h2>
           <p class="post-text__question">“Um… what’s going on here?”</p>
-          <p class="post-text__paragraph">
+          <p>
             Nulla facilisi. Praesent molestie diam eu enim aliquet pellentesque.
             Vestibulum consectetur vestibulum tristique. Sed purus neque,
             maximus fermentum bibendum et, porta in sapien.
           </p>
-
-          <button type="button" class="bnt-base bnt-left">About Codx</button>
+          <a href="#" class="bnt-base"> About Codx </a>
         </div>
       </section>
       <section class="post">
         <ul>
-          <li>
-            <h1 style="color: red">ТУТ ДОДЕЛАТЬ ОТСТУПЫ</h1>
+          <li data-aos="fade-right">
             <span>01</span>
             <h3>Motion Graphic</h3>
             <p>
               Suspendisse sem neque, auctor a elementum ut, varius vel leo.
               Donec diam arcu, porta et magna at
             </p>
+            
           </li>
-          <li>
+
+          <li data-aos="fade-right">
             <span>02</span>
             <h3>Digital Illustration</h3>
             <p>
@@ -151,7 +341,7 @@
               Donec diam arcu, porta et magna at
             </p>
           </li>
-          <li>
+          <li data-aos="fade-right">
             <span>03</span>
             <h3>Photography</h3>
             <p>
@@ -166,119 +356,442 @@
           alt="picture post 3"
           width="552"
           height="596"
-        />
+          data-aos="fade-left"
+        >
       </section>
-      <section><h1 style="color: red">В РАЗРАБОТКЕ</h1></section>
-      <section class="colection">
-        <h2>Browse by Collections</h2>
-        <!-- Тут переделать -->
-        <ul class="colection__wrap">
-          <li>
-            <a href="">
-              <img src="" alt="" width="358" height="221" />
-              <h3>Collectibles</h3>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="" alt="" width="358" height="221" />
-              <h3>Art</h3>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="" alt="" width="358" height="221" />
-              <h3>Photography</h3>
-            </a>
-          </li>
-        </ul>
-        <button type="button" class="">View all</button>
+      <section class="post-join" data-aos="fade-up">
+        <div class="post-join__text">
+          <h2>Join Us and Developer uor most precious NFT</h2>
+          <p>
+            Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
+            diam arcu, porta et magna at Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
+          </p>
+          <a href="#" class="bnt-base"> View on OpenSea </a>
+        </div>
+        <img
+          class="sss"
+          src="img/picture-view-on-onensee.jpg"
+          alt="picture view on onensee"
+          width="493"
+          height="451"
+        >
+      </section>
+      <section class="colection-nft">
+        <h2 class="center-heading">Browse by Collections</h2>
+        <div class="catalog catalog-colection">
+          <a
+            class="colection-nft-card"
+            href="#"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <img
+              class="colection-nft-card__img"
+              src="img/collect/picture-category1.jpg"
+              alt="picture category 1"
+              width="358"
+              height="221"
+            >
+            <h3 class="colection-nft-card__title">Collectibles</h3>
+          </a>
+          <a
+            class="colection-nft-card"
+            href="#"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <img
+              class="colection-nft-card__img"
+              src="img/collect/picture-category2.jpg"
+              alt="picture category 2"
+              width="358"
+              height="221"
+            >
+            <h3 class="colection-nft-card__title">Collectibles</h3>
+          </a>
+          <a
+            class="colection-nft-card"
+            href="#"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <img
+              class="colection-nft-card__img"
+              src="img/collect/picture-category3.jpg"
+              alt="picture category 3"
+              width="358"
+              height="221"
+            >
+            <h3 class="colection-nft-card__title">Collectibles</h3>
+          </a>
+        </div>
+        <a
+          href="#"
+          class="bnt-base bnt-center"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          >View all</a
+        >
       </section>
       <section class="top-nft">
-        <h2>Top NFT</h2>
-        <section class="top-nft__wrap">
-          <a class="card">
-            <img src="" alt="White Bear" width="332" height="210" />
-            <h3>White Bear</h3>
-            <p>#54385</p>
-            <button type="button" class="">Full See</button>
-            <button type="button" class="">On Lock</button>
-          </a>
-          <a class="card">
-            <img src="" alt="Happy Luca" width="332" height="210" />
-            <h3>Happy Luca</h3>
-            <p>#54395</p>
-            <button type="button" class="">Full See</button>
-            <button type="button" class="">On Lock</button>
-          </a>
-          <a class="card">
-            <img src="" alt="Dodo" width="332" height="210" />
-            <h3>Dodo</h3>
-            <p>#54376</p>
-            <button type="button" class="">Full See</button>
-            <button type="button" class="">On Lock</button>
-          </a>
-          <a class="card">
-            <img src="" alt="Nano Nano" width="332" height="210" />
-            <h3>Nano Nano</h3>
-            <p>#54348</p>
-            <button type="button" class="">Full See</button>
-            <button type="button" class="">On Lock</button>
-          </a>
-          <a class="card">
-            <img src="" alt="Zombie" width="332" height="210" />
-            <h3>Zombie</h3>
-            <p>#54337</p>
-            <button type="button" class="">Full See</button>
-            <button type="button" class="">On Lock</button>
-          </a>
-          <a class="card">
-            <img src="" alt="Pink Devil" width="332" height="210" />
-            <h3>Pink Devil</h3>
-            <p>#54392</p>
-            <button type="button" class="">Full See</button>
-            <button type="button" class="">On Lock</button>
-          </a>
+        <h2 class="center-heading" data-aos="fade-up">Top NFT</h2>
+        <section class="catalog catalog-top-nft">
+          </div>
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="1000">
+            <img
+              class="top-nft-card__img"
+              src="img/shop/picture-TopNFT1.jpg"
+              alt="White Bear"
+              width="332"
+              height="210"
+            >
+            <div class="top-nft-card-panel">
+              <a class="top-nft-card__title" href="#">White Bear</a>
+              <p class="top-nft-card__id">#54385</p>
+              <button type="button" class="top-nft-card__bnt-full-see">
+                <img
+                  src="img/icons/eye.svg"
+                  alt="White Bear"
+                  width="15"
+                  height="10"
+                >
+              </button>
+              <button type="button" class="top-nft-card__bnt-on-lock">
+                <img
+                  src="img/icons/castle.svg"
+                  alt="White Bear"
+                  width="11"
+                  height="15"
+                >
+              </button>
+            </div>
+          </div>
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="1500">
+            <img
+              class="top-nft-card__img"
+              src="img/shop/picture-TopNFT2.jpg"
+              alt="White Bear"
+              width="332"
+              height="210"
+            >
+            <div class="top-nft-card-panel">
+              <a class="top-nft-card__title" href="#">Happy Luca</a>
+              <p class="top-nft-card__id">#54395</p>
+              <button type="button" class="top-nft-card__bnt-full-see">
+                <img
+                  src="img/icons/eye.svg"
+                  alt="White Bear"
+                  width="15"
+                  height="10"
+                >
+              </button>
+              <button type="button" class="top-nft-card__bnt-on-lock">
+                <img
+                  src="img/icons/castle.svg"
+                  alt="White Bear"
+                  width="11"
+                  height="15"
+                >
+              </button>
+            </div>
+          </div>
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="2000">
+            <img
+              class="top-nft-card__img"
+              src="img/shop/picture-TopNFT3.jpg"
+              alt="White Bear"
+              width="332"
+              height="210"
+            >
+            <div class="top-nft-card-panel">
+              <a class="top-nft-card__title" href="#">Dodo</a>
+              <p class="top-nft-card__id">#54376</p>
+              <button type="button" class="top-nft-card__bnt-full-see">
+                <img
+                  src="img/icons/eye.svg"
+                  alt="White Bear"
+                  width="15"
+                  height="10"
+                >
+              </button>
+              <button type="button" class="top-nft-card__bnt-on-lock">
+                <img
+                  src="img/icons/castle.svg"
+                  alt="White Bear"
+                  width="11"
+                  height="15"
+                >
+              </button>
+            </div>
+          </div>
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="1000">
+            <img
+              class="top-nft-card__img"
+              src="img/shop/picture-TopNFT4.jpg"
+              alt="White Bear"
+              width="332"
+              height="210"
+            >
+            <div class="top-nft-card-panel">
+              <a class="top-nft-card__title" href="#">Nano Nano</a>
+              <p class="top-nft-card__id">#54348</p>
+              <button type="button" class="top-nft-card__bnt-full-see">
+                <img
+                  src="img/icons/eye.svg"
+                  alt="White Bear"
+                  width="15"
+                  height="10"
+                >
+              </button>
+              <button type="button" class="top-nft-card__bnt-on-lock">
+                <img
+                  src="img/icons/castle.svg"
+                  alt="White Bear"
+                  width="11"
+                  height="15"
+                >
+              </button>
+            </div>
+          </div>
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="1500">
+            <img
+              class="top-nft-card__img"
+              src="img/shop/picture-TopNFT5.jpg"
+              alt="White Bear"
+              width="332"
+              height="210"
+            >
+            <div class="top-nft-card-panel">
+              <h3 class="top-nft-card__title">Zombie</h3>
+              <p class="top-nft-card__id">#54337</p>
+              <button type="button" class="top-nft-card__bnt-full-see">
+                <img
+                  src="img/icons/eye.svg"
+                  alt="White Bear"
+                  width="15"
+                  height="10"
+                >
+              </button>
+              <button type="button" class="top-nft-card__bnt-on-lock">
+                <img
+                  src="img/icons/castle.svg"
+                  alt="White Bear"
+                  width="11"
+                  height="15"
+                >
+              </button>
+            </div>
+          </div>
+          <div class="top-nft-card" data-aos="fade-up" data-aos-duration="2000">
+            <img
+              class="top-nft-card__img"
+              src="img/shop/picture-TopNFT6.jpg"
+              alt="White Bear"
+              width="332"
+              height="210"
+            >
+            <div class="top-nft-card-panel">
+              <a class="top-nft-card__title" href="#">Pink Devil</a>
+              <p class="top-nft-card__id">#54392</p>
+              <button type="button" class="top-nft-card__bnt-full-see">
+                <img
+                  src="img/icons/eye.svg"
+                  alt="White Bear"
+                  width="15"
+                  height="10"
+                >
+              </button>
+              <button type="button" class="top-nft-card__bnt-on-lock">
+                <img
+                  src="img/icons/castle.svg"
+                  alt="White Bear"
+                  width="11"
+                  height="15"
+                >
+              </button>
+            </div>
+          </div>
         </section>
-        <button type="button" class="">View all</button>
+        <a
+          href="#"
+          class="bnt-base bnt-center"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          >View all</a
+        >
       </section>
-      <form action="">
-        <h2>Stay in the loop</h2>
-        <p>
-          Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
-          diam arcu, porta et magna at
-        </p>
-        <input type="email" />
-        <input type="text" />
-        <button type="button">Sing Up</button>
-      </form>
+      <section>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="form__title">Stay in the loop</h2>
+          <p class="form__description">
+            Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec
+            diam arcu, porta et magna at
+          </p>
+        </div>
+        <form id="forms-subs-events" class="form-be-aware-of-event">
+          <input
+            class="input-email form__input"
+            type="email"
+            name="emailUser"
+            placeholder="Your email address"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+          <input
+            class="input-phone-num form__input"
+            type="text"
+            name="prohoneNumUser"
+            placeholder="Your phone number"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+          <button
+            class="bnt-rounded-corners"
+            type="submit"
+            form="forms-subs-events"
+            name="submitSingUp"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            Sing Up
+          </button>
+        </form>
+      </section>
     </main>
-    <footer class="container">
-      <ul>
-        <li>
-          <a class="logo" href="#"
-            ><img src="" alt="CodX" width="138" height="50"
-          /></a>
-        </li>
-        <li>
-          <h2>Site</h2>
-          <ul>
-            <li>About us</li>
-            <li>NFTs</li>
-            <li>Contact</li>
+    <footer class="container" data-aos="fade-up" data-aos-duration="1500">
+      <h2 class="visually-hidden">footer info</h2>
+      <div class="footer-container">
+        <div class="footer-container-list">
+          <ul class="footer-container-list">
+            <li class="footer-container-list__item">
+              <a class="logo" href="#">
+                <img
+                  src="img/icons/logo.svg"
+                  alt="CodX"
+                  width="138"
+                  height="50"
+                >
+              </a>
+              <a>Join in community</a>
+              <div class="nav-links-icons">
+                <a class="nav-link-icon" href="#">
+                  <img
+                    src="img/icons/twitter.svg"
+                    alt="Twitter"
+                    width="18"
+                    height="18"
+                  >
+                </a>
+                <a class="nav-link-icon" href="#">
+                  <img
+                    src="img/icons/inst.svg"
+                    alt="Instagram"
+                    width="18"
+                    height="18"
+                  >
+                </a>
+                <a class="nav-link-icon" href="#">
+                  <img
+                    src="img/icons/facebook.svg"
+                    alt="Facebook"
+                    width="18"
+                    height="18"
+                  >
+                </a>
+              </div>
+            </li>
+            <li class="footer-container-list__item">
+              <h2 class="item__title">Site</h2>
+              <ul class="item__list-link">
+                <li><a href="#" class="footer-link">About us</a></li>
+                <li><a href="#" class="footer-link">NFTs</a></li>
+                <li><a href="#" class="footer-link">Contact</a></li>
+              </ul>
+            </li>
+            <li class="footer-container-list__item">
+              <h2 class="item__title">Utility</h2>
+              <ul class="item__list-link">
+                <li><a href="#" class="footer-link">Style guide</a></li>
+                <li><a href="#" class="footer-link">Lincensing</a></li>
+                <li><a href="#" class="footer-link">404</a></li>
+              </ul>
+            </li>
+            <li class="footer-container-list__item">
+              <h2 class="item__title">Work</h2>
+              <ul class="item__list-link">
+                <li><a href="#" class="footer-link">Patners</a></li>
+                <li><a href="#" class="footer-link">Individuals</a></li>
+                <li><a href="#" class="footer-link">OpenSea</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li>
-          <h2>Utility</h2>
-          <ul>
-            <li>Style guide</li>
-            <li>Lincensing</li>
-            <li>404</li>
-          </ul>
-        </li>
-      </ul>
-      <p>© 2022 All rights reserved.</p>
-      <p>Created By <span>Udesly</span> Powered By <span>Webflow</span></p>
+        </div>
+        <div class="footer__text">
+          <p>© 2022 All rights reserved.</p>
+          <p>Created By <span>Udesly</span> Powered By <span>Webflow</span></p>
+          <button id="bnt-open-modal-payment" class="bnt-base" type="button">
+            Открыть модальное окно
+          </button>
+        </div>
+      </div>
     </footer>
+    <div id="modal-payment" class="modal modal-hidden">
+      <div class="modal__wrap">
+        <h2>Modal window</h2>
+        <p>Created for tasks 6 and 8</p>
+        <button class="bnt-close" type="button"></button>
+        <form id="modal-payment__form" class="modal__form">
+          <input
+            class="form__input"
+            type="text"
+            name="userName"
+            placeholder="Your name"
+            data-parsley-minlength="3"
+            data-parsley-maxlength="20"
+            data-parsley-error-message="Name - the minimum number of characters is 3, the maximum is 20"
+            required
+          >
+          <input
+            id="modal-payment-inpunt-phone"
+            class="form__input"
+            type="text"
+            name="userPhoneNum"
+            placeholder="Your phone number"
+            data-parsley-minlength="17"
+            data-parsley-error-message="Phone number - consists of 12 digits"
+            required
+          >
+          <input
+            id="modal-payment-inpunt-credit-card"
+            class="form__input"
+            type="text"
+            name="userCreditCard"
+            placeholder="Your number credit card"
+            data-parsley-minlength="16"
+            data-parsley-error-message="Number credit card - consists of 16 digits"
+            required
+          >
+          <input
+            id="modal-payment-inpunt-date-birth"
+            class="form__input"
+            type="text"
+            name="userDateOfBirth"
+            placeholder="Your date of birth"
+            data-parsley-minlength="8"
+            data-parsley-error-message="Date of birth - contains day, month and year"
+            required
+          >
+          <div class="error-container"></div>
+          <button class="bnt-rounded-corners" type="submit">Shop</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/cleave.js"></script>
+    <script src="../js/cleave-phone.by.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/parsley.min.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

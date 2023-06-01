@@ -3,7 +3,8 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("fonts/Outfit-Regular.ttf") format("truetype");
+  src: url("../fonts/Outfit-Regular.woff2") format("woff2"),
+   url("../fonts/Outfit-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -11,7 +12,22 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("fonts/Outfit-Bold.ttf") format("truetype");
+  src: url("../fonts/Outfit-Bold.woff2") format("woff2"),
+   url("../fonts/Outfit-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "WixMadeforDisplayRegular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/WixMadeforDisplay-Regular.woff2") format("woff2"),
+   url("../fonts/WixMadeforDisplay-Regular.woff") format("woff");
+}
+
+
+html{
+  font-family: "WixMadeforDisplayRegular", Helvetica, sans-serif;
 }
 
 body {
@@ -29,56 +45,99 @@ a {
   text-decoration: none;
 }
 
+button{
+  cursor: pointer;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
 .container {
   margin: 0 auto;
   width: 1200px;
+  overflow: hidden;
 }
 
 nav {
   display: flex;
   align-items: center;
+  
+
   margin: 0;
   margin-top: 17px;
-  padding: 28xp 18px 28px 19px;
+  padding: 28px 18px 28px 19px;
+}
+
+p{
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 18px;
+  color: #2f2f2f;
 }
 
 .logo {
   margin-right: 48px;
 }
 
-.nav-links {
-  margin-right: 396px;
+.nav-links{
+  width: 700px;
 }
 
 .nav-link {
   margin-right: 48px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 16px;
   color: #222222;
 }
 
 .nav-links-icons {
+  margin-left: auto;
   margin-right: 48px;
+  height: 22px;
 }
 
 .nav-link-icon {
   margin-left: 20px;
 }
 
-.nav-bnt {
-  padding: 15px;
-  padding-top: 11px;
+.bnt-rounded-corners {
+  padding: 14px;
+  padding-top: 10px;
 
   text-align: center;
 
-  font-family: "OutfitBold";
+  font-family: "OutfitBold", sans-serif;
   font-size: 13px;
   color: #ffffff;
 
   background-color: #2f2f2f;
-  border: 0px solid transparent;
+  border: 2px solid transparent;
   border-radius: 20em;
+
+  cursor:pointer;
+  transition-duration: 0.2s;
+}
+
+.bnt-rounded-corners:hover{
+  color: #222222;
+
+  border-color: #2f2f2f;
+  background-color: #ffffff;
 }
 
 .preview {
@@ -90,41 +149,51 @@ nav {
   justify-content: space-between;
 }
 
-.preview__text > p:first-child {
+.preview-title{
   margin: 0px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 13px;
   color: #82cbac;
 }
 
-.preview__text > h2 {
+.preview-slogan{
   width: 538px;
 
   padding: 0px;
   margin: 0px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 64px;
   line-height: 1.1em;
   color: #2f2f2f;
 }
 
-.preview__text > h2 + p {
+.preview-slogan + p{
   width: 400px;
-
-  font-family: "OutfitRegular";
-  font-size: 17px;
-  color: #2f2f2f;
 }
 
-.slides {
+.slides{
   position: relative;
+  width: 410px;
+  height: 410px;
+  border-radius: 30px;
+  overflow:hidden;
 }
 
-.slides > img {
-  border-radius: 30px;
+.slides .swiper-pagination{
+  bottom: 0;
 }
+
+.slides .swiper-pagination-bullet{
+  width: 10px;
+  height: 10px;
+  background-color: #2F2F2F;
+}
+/* 
+.slide  {
+  border-radius: 30px;
+} */
 
 .slides__control {
   position: absolute;
@@ -160,8 +229,19 @@ nav {
   background-color: #2f2f2f;
 }
 
+.line-imgs {
+  margin-top: 267px;
+  margin-bottom: 128px;
+  overflow: hidden;
+}
+
+.line-imgs .swiper-slide{
+  width: auto;
+}
+
+
 .center-heading {
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 64px;
   text-align: center;
   color: #2f2f2f;
@@ -170,12 +250,9 @@ nav {
 .center-heading + p {
   width: 610px;
   margin: 0 auto;
-
-  font-family: "OutfitRegular";
-  font-size: 17px;
   text-align: center;
-  color: #2f2f2f;
 }
+
 
 .tape {
   margin-top: 72px;
@@ -185,13 +262,20 @@ nav {
   padding: 11px 67px 17px 67px;
   margin-right: 8px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 22px;
   color: #2f2f2f;
 
   border: 1px solid #2f2f2f;
   border-radius: 30px;
   background-color: #ffffff;
+
+  transition-duration: 0.2s;
+}
+
+.tape-bnt:hover{
+  color: #ffffff;
+  background-color: #535252;
 }
 
 .tape-bnt-active {
@@ -199,15 +283,23 @@ nav {
   background-color: #2f2f2f;
 }
 
-.tape__warp {
-  display: flex;
+.tape__warp{
   margin-top: 64px;
+}
+
+.tape-item{
+  display: none;
+  
+}
+
+.tape-item-visible{
+  display: flex;
 }
 
 .info__profession {
   margin: 0px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 18px;
   color: #ff7f96;
 }
@@ -218,7 +310,7 @@ nav {
   margin: 0px;
   margin-top: 11px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 36px;
   color: #2f2f2f;
 }
@@ -227,13 +319,15 @@ nav {
   margin: 0px;
   margin-top: 16px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 26px;
   color: #2f2f2f;
 }
 
 .post {
   display: flex;
+
+  align-items: center;
 
   margin-top: 146px;
 }
@@ -249,7 +343,7 @@ nav {
 .post-text__heading {
   margin: 0px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 35px;
   color: #2f2f2f;
 }
@@ -258,50 +352,30 @@ nav {
   margin: 0;
   margin-top: 2px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 48px;
   color: #2f2f2f;
 }
 
-.post-text__paragraph {
-  margin: 0;
-  margin-top: 38px;
-
-  font-family: "OutfitRegular";
-  font-size: 18px;
-  color: #2f2f2f;
-}
-
-.bnt-base {
-  padding: 12px 40px 16px 40px;
-  margin-top: 32px;
-
-  font-family: "OutfitBold";
-  font-size: 15px;
-  color: #ffffff;
-
-  border: none;
-  background-color: #2f2f2f;
-}
-
-.bnt-left {
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
-}
-
 .post > ul {
   padding: 0;
-  margin: 0px;
+  margin: 64px;
+  margin-right: 153px;
   list-style: none;
+}
+
+.post > ul > li{
+  margin: 0;
+  margin-bottom: 32px;
 }
 
 .post > ul > li > span {
   display: inline-block;
 
   padding: 6px 20px 11px 20px;
+  margin-bottom: 5px;
 
-  font-family: "OutfitRegular";
+  font-family: "OutfitRegular", sans-serif;
   font-size: 16px;
   color: #ffffff;
 
@@ -319,14 +393,418 @@ nav {
 
 .post > ul > li > h3 {
   margin: 0px;
-  font-family: "OutfitBold";
+  margin-bottom: 13px;
+  font-family: "OutfitBold", sans-serif;
   font-size: 35px;
   color: #2f2f2f;
 }
 
-.post > ul > li > p {
+.post-join {
+  display: flex;
+  margin-top: 208px;
+  border-radius: 30px;
+  background-color: #82cbac;
+}
+
+.post-join__background {
+  position: absolute;
+  background-color: #82cbac;
+  color: red;
+  z-index: -1;
+}
+
+.post-join__text {
+  width: 657px;
+  padding: 67px 32px;
+  padding-right: 0;
+}
+
+.post-join__text > h2 {
   margin: 0;
-  font-family: "OutfitRegular";
+
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 64px;
+  color: #2f2f2f;
+}
+
+.post-join__text > p {
+  margin: 0;
+  margin-top: 33px;
+
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 20px;
+  color: #2f2f2f;
+}
+
+.post-join > img {
+  margin-left: auto;
+  margin-right: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.colection-nft {
+  margin-top: 101px;
+}
+
+.catalog{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.colection-nft-card {
+  width: 358px;
+  margin-right: 63px;
+}
+
+.catalog-colection > .colection-nft-card:nth-child(3n){
+  margin-right: 0;
+}
+
+.colection-nft-card__img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.colection-nft-card__title {
+  padding-left: 50px;
+  padding-top: 29px;
+  padding-bottom: 37px;
+
+  font-family: "OutfitBold", sans-serif;
   font-size: 26px;
   color: #2f2f2f;
+}
+
+.top-nft {
+  margin-top: 95px;
+}
+
+.catalog-top-nft {
+  padding: 0 64px;
+}
+
+.top-nft-card {
+  width: 332px;
+  margin-right: 38px;
+  margin-bottom: 42px;
+}
+
+.catalog-top-nft > .top-nft-card:nth-child(3n){
+  margin-right: 0;
+}
+
+.top-nft-card:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.top-nft-card__img {
+  border-radius: 30px;
+}
+
+.top-nft-card-panel {
+  display: flex;
+  align-items: center;
+  padding: 28px 0px 32px 28px;
+}
+
+.top-nft-card__title {
+  display: inline;
+
+  margin-right: 8px;
+
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 16px;
+  color: #2f2f2f;
+}
+
+.top-nft-card__id {
+  margin: 0px;
+
+  font-family: "OutfitBold", sans-serif;
+  font-size: 18px;
+  color: #2f2f2f;
+}
+
+.top-nft-card__bnt-full-see {
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+  margin-left: auto;
+  margin-right: 9px;
+
+  background-color: rgba(168, 193, 216, 0.2);
+  border: none;
+}
+
+.top-nft-card__bnt-on-lock {
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+
+  background-color: #ff7f96;
+  border: none;
+  border-radius: 45px;
+}
+
+.form__title {
+  margin: 0;
+
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 35px;
+  color: #2f2f2f;
+}
+
+.form__description {
+  margin: 0;
+  margin-top: 16px;
+
+  width: 420px;
+
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 18px;
+  color: #2f2f2f;
+}
+
+.form__input {
+  padding-left: 32px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0;
+  margin-top: 16px;
+  width: 327px;
+
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 14px;
+  color: #2f2f2f;
+
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+}
+
+.modal__form > .form__input{
+  width: auto;
+}
+
+.form__input-error{
+  border-color: rgba(255, 0, 0, 0.5);
+}
+
+.footer-container {
+  padding: 0 200px;
+  margin-top: 97px;
+  margin-bottom: 42px;
+}
+
+.footer-container-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-container-list__item {
+  display: block;
+  min-width: 106px;
+  margin-right: 90px;
+}
+
+.footer-container-list__item > .logo + a {
+  display: inline-block;
+  margin-top: 21px;
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 20px;
+  color: #2f2f2f;
+}
+
+.footer-container-list__item > .nav-links-icons {
+  margin-top: 23px;
+}
+
+.footer-container-list__item > .nav-links-icons > .nav-link-icon:first-child {
+  margin-left: 0;
+}
+
+.footer-container-list__item:last-child {
+  margin-right: 0;
+}
+
+.item__title {
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 20px;
+  color: #2f2f2f;
+}
+
+.item__list-link {
+  padding: 0;
+  margin-top: 17px;
+  list-style: none;
+}
+
+.footer-link{
+  margin-bottom: 8px;
+
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 16px;
+  color: #2f2f2f;
+}
+
+.footer__text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 58px;
+}
+
+.footer__text > p {
+  margin: 0;
+  margin-top: 26px;
+  font-family: "OutfitRegular", sans-serif;
+  font-size: 16px;
+  color: #2f2f2f;
+}
+
+.footer__text > p > span {
+  color: #ff7f96;
+}
+
+button:disabled{
+  opacity: 0.5;
+}
+
+.bnt-base{
+  padding: 12px 40px 16px 40px;
+
+  font-family: "OutfitBold", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+
+  border: 2px solid transparent;
+  background-color: #2F2F2F;  
+
+  cursor:pointer;
+  transition-duration: 0.2s;
+}
+
+.bnt-base:hover{
+  color: #222222;
+
+  border-color: #2F2F2F;
+  background-color: #ffffff;
+}
+
+a.bnt-base{
+  text-align: center;
+}
+
+.post-text > .bnt-base{
+  display: block;
+  width: 166px;
+  margin-top: 27px;
+}
+
+.post-join__text > a.bnt-base{
+  display: block;
+  width: 207px;
+  padding: 12px 0 16px 0;
+  margin-top: 33px;
+}
+
+.bnt-center{
+  display: block;
+  margin: 0 auto;
+}
+
+.catalog + .bnt-base {
+  margin-top: 64px;
+}
+
+a.bnt-center{
+  width: 134px;
+  padding: 12px 0 16px 0;
+}
+
+.bnt-close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
+  right: 20px;
+  top: 20px;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+
+.bnt-close:before,
+.bnt-close:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -1px;
+  height: 1px;
+  background-color: black;
+}
+
+.bnt-close:before {
+  transform: rotate(45deg);
+}
+
+.bnt-close:after {
+  transform: rotate(-45deg);
+}
+
+
+.modal{
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  background-color: rgba(56, 56, 56, 0.9);
+  z-index: 1;
+}
+
+.modal-hidden{
+  display: none;
+}
+
+.modal__wrap{
+  position: absolute;
+  width: 500px;
+
+  padding: 30px;
+
+  top: 50%;
+  left: 50%;
+
+  border-radius: 30px;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.modal__form{
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__form > .bnt-rounded-corners{
+  margin-top: 20px;
+}
+
+.sss{
+  height: auto;
+  object-fit:cover
 }
